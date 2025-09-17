@@ -1,0 +1,17 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+    exclude: '../src/Controller/Admin/'
+    prefix: /{_locale}
+    requirements:
+        _locale: fr|en|de|tr
+    defaults:
+        _locale: fr
+
+# Admin routes
+admin:
+    resource: ../src/Controller/Admin/
+    type: attribute
+    prefix: /admin

@@ -1,0 +1,244 @@
+# English messages for BodyLuxa
+
+# Navigation
+home: "Home"
+services: "Services"
+about: "About"
+contact: "Contact"
+call_us: "Call Us"
+quick_links: "Quick Links"
+contact_info: "Contact Info"
+all_rights_reserved: "All rights reserved"
+privacy_policy: "Privacy Policy"
+terms_of_service: "Terms of Service"
+
+# Homepage
+medical_tourism_expert: "Medical Tourism Expert"
+hero_title: "Enhance your natural beauty with"
+hero_description_default: "Your trusted partner for quality medical and aesthetic care in Turkey. Unbeatable prices, exceptional results."
+discover_services: "Discover our services"
+get_quote: "Get a quote"
+based_on_reviews: "based on reviews"
+satisfied_patients: "satisfied patients"
+medical_tourism: "Medical tourism"
+satisfaction: "Satisfaction"
+years_experience: "years of experience"
+
+# Services
+our_services: "Our Services"
+services_description: "Discover our complete range of medical and aesthetic services with Turkey's best specialists."
+services_page_description: "Explore our cutting-edge medical and aesthetic services, performed by recognized experts in accredited clinics."
+
+hair_transplant: "Hair Transplant"
+hair_transplant_desc: "Regain thick hair with our latest generation FUE and DHI techniques."
+hair_transplant_detailed_desc: "Our specialists use the most advanced techniques to guarantee natural and lasting results."
+
+dental_care: "Dental Care"
+dental_care_desc: "Get your smile back with our comprehensive dental treatments and quality implants."
+dental_care_detailed_desc: "Implants, crowns, veneers and whitening performed with the most modern technologies."
+
+cosmetic_surgery: "Cosmetic Surgery"
+cosmetic_surgery_desc: "Enhance your silhouette with our tailor-made aesthetic interventions."
+cosmetic_surgery_detailed_desc: "Personalized interventions performed by experienced surgeons under optimal conditions."
+
+eye_surgery: "Eye Surgery"
+eye_surgery_desc: "Regain perfect vision thanks to our ophthalmological interventions."
+eye_surgery_detailed_desc: "Cataract surgery, LASIK and other treatments to improve your vision."
+
+bariatric_surgery: "Bariatric Surgery"
+bariatric_surgery_desc: "Lose weight sustainably with our adapted surgical solutions."
+bariatric_surgery_detailed_desc: "Sleeve, bypass and other techniques to help you regain a healthy weight."
+
+ivf_treatment: "IVF Treatment"
+ivf_treatment_desc: "Achieve your dream of parenthood with our advanced fertility treatments."
+ivf_treatment_detailed_desc: "Complete support for your assisted reproductive technology journey."
+
+learn_more: "Learn more"
+starting_from: "Starting from"
+
+# Service details
+fue_technique: "FUE Technique"
+dhi_technique: "DHI Technique"
+beard_transplant: "Beard transplant"
+eyebrow_transplant: "Eyebrow transplant"
+dental_implants: "Dental implants"
+veneers: "Dental veneers"
+dental_crowns: "Dental crowns"
+teeth_whitening: "Teeth whitening"
+rhinoplasty: "Rhinoplasty"
+breast_augmentation: "Breast augmentation"
+liposuction: "Liposuction"
+facelift: "Facelift"
+lasik_surgery: "LASIK surgery"
+cataract_surgery: "Cataract surgery"
+blepharoplasty: "Blepharoplasty"
+retinal_treatment: "Retinal treatment"
+gastric_sleeve: "Gastric sleeve"
+gastric_bypass: "Gastric bypass"
+gastric_balloon: "Gastric balloon"
+mini_gastric_bypass: "Mini gastric bypass"
+in_vitro_fertilization: "In vitro fertilization"
+egg_donation: "Egg donation"
+sperm_donation: "Sperm donation"
+embryo_transfer: "Embryo transfer"
+
+# Why choose us
+why_choose_us: "Why Choose Us?"
+why_choose_us_desc: "Discover the advantages that make BodyLuxa your ideal partner for your medical journey."
+
+quality_guarantee: "Quality Guarantee"
+quality_guarantee_desc: "Our partner clinics are accredited and meet the highest international standards."
+
+expert_surgeons: "Expert Surgeons"
+expert_surgeons_desc: "Our doctors are certified and have recognized expertise in their field."
+
+24_7_support: "24/7 Support"
+24_7_support_desc: "Our team supports you before, during and after your medical stay."
+
+complete_package: "Complete Package"
+complete_package_desc: "Transport, accommodation, care and post-operative follow-up included in our packages."
+
+best_prices: "Best Prices"
+best_prices_desc: "Up to 70% savings compared to European rates without compromising on quality."
+
+accredited_clinics: "Accredited Clinics"
+accredited_clinics_desc: "All our partner clinics are certified by international organizations."
+
+# Process
+our_process: "Our Process"
+process_description: "Personalized support in 4 simple steps for your medical journey."
+
+step_consultation: "Consultation"
+step_consultation_desc: "Free evaluation of your case and personalized recommendations."
+
+step_planning: "Planning"
+step_planning_desc: "Organization of your stay with complete support."
+
+step_treatment: "Treatment"
+step_treatment_desc: "Intervention performed by our expert surgeons."
+
+step_followup: "Follow-up"
+step_followup_desc: "Post-operative care and long-term follow-up."
+
+# Call to action
+ready_to_start: "Ready to start your transformation?"
+cta_description: "Contact us today for a free and personalized consultation."
+book_consultation: "Book a consultation"
+
+# Why Turkey
+why_turkey: "Why Turkey?"
+why_turkey_desc: "Istanbul, destination of choice for medical tourism with unique advantages."
+
+cost_effective: "Cost-Effective"
+cost_effective_desc: "Save up to 70% compared to European rates."
+
+world_class_facilities: "World-Class Facilities"
+world_class_facilities_desc: "Modern clinics equipped with the latest technologies."
+
+strategic_location: "Strategic Location"
+strategic_location_desc: "At the crossroads of Europe and Asia, easily accessible."
+
+multilingual_support: "Multilingual Support"
+multilingual_support_desc: "Our team speaks your language for optimal support."
+
+# Contact page
+contact_us: "Contact Us"
+contact_page_description: "Our team of experts is at your disposal to answer all your questions and support you in your project."
+
+get_in_touch: "Get in Touch"
+address: "Address"
+phone: "Phone"
+email: "Email"
+whatsapp: "WhatsApp"
+business_hours: "Business Hours"
+monday_friday: "Monday - Friday"
+saturday: "Saturday"
+sunday: "Sunday"
+closed: "Closed"
+
+chat_on_whatsapp: "Chat on WhatsApp"
+call_now: "Call Now"
+send_us_message: "Send us a message"
+
+first_name: "First Name"
+last_name: "Last Name"
+country: "Country"
+select_country: "Select a country"
+interested_service: "Service of Interest"
+select_service: "Select a service"
+message: "Message"
+message_placeholder: "Describe your project, expectations and any useful information..."
+subscribe_newsletter: "Subscribe to newsletter"
+accept_privacy_policy: "I accept the privacy policy"
+send_message: "Send Message"
+other: "Other"
+
+interested_in_service: "Interested in a service?"
+contact_us_for_personalized_quote: "Contact us for a personalized and free quote."
+
+# FAQ
+frequently_asked_questions: "Frequently Asked Questions"
+faq_description: "Find answers to the most common questions about our services."
+
+faq_question_1: "How long does a medical stay in Turkey last?"
+faq_answer_1: "Duration varies by procedure: 3-5 days for hair transplant, 5-7 days for dental care, 7-14 days for cosmetic surgery."
+
+faq_question_2: "What are the qualifications of the surgeons?"
+faq_answer_2: "All our partner surgeons are certified by the Turkish Ministry of Health and have international certifications in their specialty."
+
+faq_question_3: "Do prices include accommodation?"
+faq_answer_3: "Yes, our packages include accommodation in 4-5 star hotels, transfers and complete support."
+
+faq_question_4: "Are there guarantees on procedures?"
+faq_answer_4: "We offer specific guarantees depending on the type of procedure and personalized post-operative follow-up."
+
+message_sent_successfully: "Message sent successfully!"
+
+# About page
+about_bodyluxa: "About BodyLuxa"
+about_page_description: "Discover the history, values and team that make BodyLuxa your trusted partner."
+
+our_story: "Our Story"
+about_story_default: "BodyLuxa was born from the desire to democratize access to quality medical and aesthetic care. Founded by passionate professionals, our agency has been supporting patients from around the world in their transformation journey for over 5 years."
+
+about_mission_default: "Our mission is to offer you medical excellence at an affordable price, in a secure environment and with personalized support. We believe that everyone deserves access to the best care, without compromising on quality."
+
+happy_patients: "Happy Patients"
+expert_doctors: "Expert Doctors"
+award_winning: "Award-Winning"
+fully_accredited: "Fully Accredited"
+
+our_values: "Our Values"
+values_description: "The principles that guide our daily action."
+
+compassion: "Compassion"
+compassion_desc: "We place humans at the heart of our concerns and support each patient with empathy."
+
+excellence: "Excellence"
+excellence_desc: "We rigorously select our partners to guarantee the highest quality care."
+
+trust: "Trust"
+trust_desc: "Transparency, honesty and respect for our commitments are the pillars of our customer relationship."
+
+our_team: "Our Team"
+team_description: "Dedicated professionals at your service for exceptional support."
+
+chief_medical_officer: "Chief Medical Officer"
+surgical_specialist: "Surgical Specialist"
+patient_coordinator: "Patient Coordinator"
+travel_coordinator: "Travel Coordinator"
+
+team_member_1_bio: "15 years of experience in cosmetic surgery and international medical coordination."
+team_member_2_bio: "Specialist in plastic surgery with more than 1000 successful procedures."
+team_member_3_bio: "Personalized support and post-operative follow-up of our patients."
+team_member_4_bio: "Complete organization of your medical stay in Turkey."
+
+certifications_partnerships: "Certifications and Partnerships"
+certifications_description: "Our accreditations testify to our commitment to excellence."
+
+what_patients_say: "What Our Patients Say"
+testimonials_description: "Authentic testimonials from those who have trusted us."
+
+testimonial_1: "An exceptional experience from start to finish. Perfect results and very professional team. I highly recommend!"
+testimonial_2: "Impeccable service, modern clinic and results beyond my expectations. Thank you to the entire BodyLuxa team!"
+testimonial_3: "Perfect support, very competitive prices and impeccable quality. An experience to repeat without hesitation."

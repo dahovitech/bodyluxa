@@ -1,0 +1,314 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'contact'|trans }} - {{ config.getWebsiteTitle() }}{% endblock %}
+
+{% block body %}
+<!-- Hero Section -->
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4">{{ 'contact_us'|trans }}</h1>
+                <p class="lead">{{ 'contact_page_description'|trans }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <div class="sticky-top" style="top: 100px;">
+                    <h3 class="mb-4">{{ 'get_in_touch'|trans }}</h3>
+                    
+                    <div class="contact-info">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">{{ 'address'|trans }}</h6>
+                                <p class="mb-0 text-muted">{{ config.getCompanyAddress() }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">{{ 'phone'|trans }}</h6>
+                                <p class="mb-0 text-muted">
+                                    <a href="tel:{{ config.getContactPhone() }}" class="text-decoration-none">
+                                        {{ config.getContactPhone() }}
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">{{ 'email'|trans }}</h6>
+                                <p class="mb-0 text-muted">
+                                    <a href="mailto:{{ config.getContactEmail() }}" class="text-decoration-none">
+                                        {{ config.getContactEmail() }}
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="contact-icon me-3">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">{{ 'whatsapp'|trans }}</h6>
+                                <p class="mb-0 text-muted">
+                                    <a href="https://wa.me/{{ config.getWhatsappNumber() }}" target="_blank" class="text-decoration-none">
+                                        {{ config.getWhatsappNumber() }}
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">{{ 'business_hours'|trans }}</h6>
+                                <p class="mb-0 text-muted small">
+                                    {{ 'monday_friday'|trans }}: 9:00 - 18:00<br>
+                                    {{ 'saturday'|trans }}: 9:00 - 15:00<br>
+                                    {{ 'sunday'|trans }}: {{ 'closed'|trans }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Action Buttons -->
+                    <div class="mt-4">
+                        <a href="https://wa.me/{{ config.getWhatsappNumber() }}" target="_blank" class="btn btn-success w-100 mb-3">
+                            <i class="fab fa-whatsapp me-2"></i>
+                            {{ 'chat_on_whatsapp'|trans }}
+                        </a>
+                        
+                        <a href="tel:{{ config.getContactPhone() }}" class="btn btn-primary w-100">
+                            <i class="fas fa-phone me-2"></i>
+                            {{ 'call_now'|trans }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="bg-light p-4 rounded-3">
+                    <h3 class="mb-4">{{ 'send_us_message'|trans }}</h3>
+                    
+                    <form id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">{{ 'first_name'|trans }} *</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">{{ 'last_name'|trans }} *</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">{{ 'email'|trans }} *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">{{ 'phone'|trans }} *</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="country" class="form-label">{{ 'country'|trans }}</label>
+                                <select class="form-select" id="country" name="country">
+                                    <option value="">{{ 'select_country'|trans }}</option>
+                                    <option value="FR">🇫🇷 France</option>
+                                    <option value="GB">🇬🇧 United Kingdom</option>
+                                    <option value="DE">🇩🇪 Germany</option>
+                                    <option value="ES">🇪🇸 Spain</option>
+                                    <option value="IT">🇮🇹 Italy</option>
+                                    <option value="NL">🇳🇱 Netherlands</option>
+                                    <option value="BE">🇧🇪 Belgium</option>
+                                    <option value="CH">🇨🇭 Switzerland</option>
+                                    <option value="AT">🇦🇹 Austria</option>
+                                    <option value="US">🇺🇸 United States</option>
+                                    <option value="CA">🇨🇦 Canada</option>
+                                    <option value="OTHER">{{ 'other'|trans }}</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="service" class="form-label">{{ 'interested_service'|trans }}</label>
+                                <select class="form-select" id="service" name="service">
+                                    <option value="">{{ 'select_service'|trans }}</option>
+                                    <option value="hair-transplant">{{ 'hair_transplant'|trans }}</option>
+                                    <option value="dental-care">{{ 'dental_care'|trans }}</option>
+                                    <option value="cosmetic-surgery">{{ 'cosmetic_surgery'|trans }}</option>
+                                    <option value="eye-surgery">{{ 'eye_surgery'|trans }}</option>
+                                    <option value="bariatric-surgery">{{ 'bariatric_surgery'|trans }}</option>
+                                    <option value="ivf-treatment">{{ 'ivf_treatment'|trans }}</option>
+                                    <option value="other">{{ 'other'|trans }}</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">{{ 'message'|trans }} *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required 
+                                          placeholder="{{ 'message_placeholder'|trans }}"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        {{ 'subscribe_newsletter'|trans }}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="privacy" name="privacy" required>
+                                    <label class="form-check-label" for="privacy">
+                                        {{ 'accept_privacy_policy'|trans }} *
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>
+                                    {{ 'send_message'|trans }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ 'frequently_asked_questions'|trans }}</h2>
+            <p class="lead text-muted">{{ 'faq_description'|trans }}</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                {{ 'faq_question_1'|trans }}
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                {{ 'faq_answer_1'|trans }}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                {{ 'faq_question_2'|trans }}
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                {{ 'faq_answer_2'|trans }}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                {{ 'faq_question_3'|trans }}
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                {{ 'faq_answer_3'|trans }}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                {{ 'faq_question_4'|trans }}
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                {{ 'faq_answer_4'|trans }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.25);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(44, 62, 80, 0.25);
+}
+</style>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form validation
+            const form = e.target;
+            const formData = new FormData(form);
+            
+            // Here you would typically send the form data to your backend
+            // For now, we'll just show a success message
+            
+            alert('{{ "message_sent_successfully"|trans }}');
+            form.reset();
+        });
+    </script>
+{% endblock %}

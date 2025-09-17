@@ -1,0 +1,244 @@
+# Messages français pour BodyLuxa
+
+# Navigation
+home: "Accueil"
+services: "Services"
+about: "À propos"
+contact: "Contact"
+call_us: "Appelez-nous"
+quick_links: "Liens rapides"
+contact_info: "Informations de contact"
+all_rights_reserved: "Tous droits réservés"
+privacy_policy: "Politique de confidentialité"
+terms_of_service: "Conditions de service"
+
+# Homepage
+medical_tourism_expert: "Expert en Tourisme Médical"
+hero_title: "Sublimez votre naturel avec"
+hero_description_default: "Votre partenaire de confiance pour des soins médicaux et esthétiques de qualité en Turquie. Des prix imbattables, des résultats exceptionnels."
+discover_services: "Découvrir nos services"
+get_quote: "Demander un devis"
+based_on_reviews: "basé sur les avis"
+satisfied_patients: "patients satisfaits"
+medical_tourism: "Tourisme médical"
+satisfaction: "Satisfaction"
+years_experience: "ans d'expérience"
+
+# Services
+our_services: "Nos Services"
+services_description: "Découvrez notre gamme complète de services médicaux et esthétiques avec les meilleurs spécialistes de Turquie."
+services_page_description: "Explorez nos services médicaux et esthétiques de pointe, réalisés par des experts reconnus dans des cliniques accréditées."
+
+hair_transplant: "Greffe de Cheveux"
+hair_transplant_desc: "Retrouvez une chevelure dense avec nos techniques FUE et DHI de dernière génération."
+hair_transplant_detailed_desc: "Nos spécialistes utilisent les techniques les plus avancées pour vous garantir des résultats naturels et durables."
+
+dental_care: "Soins Dentaires"
+dental_care_desc: "Retrouvez le sourire avec nos traitements dentaires complets et nos implants de qualité."
+dental_care_detailed_desc: "Implants, couronnes, facettes et blanchiment réalisés avec les technologies les plus modernes."
+
+cosmetic_surgery: "Chirurgie Esthétique"
+cosmetic_surgery_desc: "Sublimez votre silhouette avec nos interventions esthétiques sur-mesure."
+cosmetic_surgery_detailed_desc: "Des interventions personnalisées réalisées par des chirurgiens expérimentés dans des conditions optimales."
+
+eye_surgery: "Chirurgie Oculaire"
+eye_surgery_desc: "Retrouvez une vision parfaite grâce à nos interventions ophtalmologiques."
+eye_surgery_detailed_desc: "Chirurgie de la cataracte, LASIK et autres traitements pour améliorer votre vision."
+
+bariatric_surgery: "Chirurgie Bariatrique"
+bariatric_surgery_desc: "Perdez du poids durablement avec nos solutions chirurgicales adaptées."
+bariatric_surgery_detailed_desc: "Sleeve, bypass et autres techniques pour vous aider à retrouver un poids santé."
+
+ivf_treatment: "Fécondation In Vitro"
+ivf_treatment_desc: "Réalisez votre rêve de parentalité avec nos traitements de fertilité avancés."
+ivf_treatment_detailed_desc: "Accompagnement complet pour votre parcours de procréation médicalement assistée."
+
+learn_more: "En savoir plus"
+starting_from: "À partir de"
+
+# Service details
+fue_technique: "Technique FUE"
+dhi_technique: "Technique DHI"
+beard_transplant: "Greffe de barbe"
+eyebrow_transplant: "Greffe de sourcils"
+dental_implants: "Implants dentaires"
+veneers: "Facettes dentaires"
+dental_crowns: "Couronnes dentaires"
+teeth_whitening: "Blanchiment dentaire"
+rhinoplasty: "Rhinoplastie"
+breast_augmentation: "Augmentation mammaire"
+liposuction: "Liposuccion"
+facelift: "Lifting du visage"
+lasik_surgery: "Chirurgie LASIK"
+cataract_surgery: "Chirurgie de la cataracte"
+blepharoplasty: "Blépharoplastie"
+retinal_treatment: "Traitement rétinien"
+gastric_sleeve: "Sleeve gastrique"
+gastric_bypass: "Bypass gastrique"
+gastric_balloon: "Ballon gastrique"
+mini_gastric_bypass: "Mini bypass gastrique"
+in_vitro_fertilization: "Fécondation in vitro"
+egg_donation: "Don d'ovules"
+sperm_donation: "Don de sperme"
+embryo_transfer: "Transfert d'embryon"
+
+# Why choose us
+why_choose_us: "Pourquoi nous choisir ?"
+why_choose_us_desc: "Découvrez les avantages qui font de BodyLuxa votre partenaire idéal pour votre parcours médical."
+
+quality_guarantee: "Garantie Qualité"
+quality_guarantee_desc: "Nos cliniques partenaires sont accréditées et respectent les plus hauts standards internationaux."
+
+expert_surgeons: "Chirurgiens Experts"
+expert_surgeons_desc: "Nos médecins sont certifiés et possèdent une expertise reconnue dans leur domaine."
+
+24_7_support: "Support 24/7"
+24_7_support_desc: "Notre équipe vous accompagne avant, pendant et après votre séjour médical."
+
+complete_package: "Forfait Complet"
+complete_package_desc: "Transport, hébergement, soins et suivi post-opératoire inclus dans nos forfaits."
+
+best_prices: "Meilleurs Prix"
+best_prices_desc: "Jusqu'à 70% d'économies par rapport aux tarifs européens sans compromis sur la qualité."
+
+accredited_clinics: "Cliniques Accréditées"
+accredited_clinics_desc: "Toutes nos cliniques partenaires sont certifiées par les organismes internationaux."
+
+# Process
+our_process: "Notre Processus"
+process_description: "Un accompagnement personnalisé en 4 étapes simples pour votre parcours médical."
+
+step_consultation: "Consultation"
+step_consultation_desc: "Évaluation gratuite de votre cas et recommandations personnalisées."
+
+step_planning: "Planification"
+step_planning_desc: "Organisation de votre séjour avec prise en charge complète."
+
+step_treatment: "Traitement"
+step_treatment_desc: "Intervention réalisée par nos chirurgiens experts."
+
+step_followup: "Suivi"
+step_followup_desc: "Accompagnement post-opératoire et suivi à long terme."
+
+# Call to action
+ready_to_start: "Prêt à commencer votre transformation ?"
+cta_description: "Contactez-nous dès aujourd'hui pour une consultation gratuite et personnalisée."
+book_consultation: "Réserver une consultation"
+
+# Why Turkey
+why_turkey: "Pourquoi la Turquie ?"
+why_turkey_desc: "Istanbul, destination de choix pour le tourisme médical avec des avantages uniques."
+
+cost_effective: "Prix Compétitifs"
+cost_effective_desc: "Économisez jusqu'à 70% par rapport aux tarifs européens."
+
+world_class_facilities: "Infrastructures de Classe Mondiale"
+world_class_facilities_desc: "Cliniques modernes équipées des dernières technologies."
+
+strategic_location: "Position Stratégique"
+strategic_location_desc: "Au carrefour de l'Europe et de l'Asie, facilement accessible."
+
+multilingual_support: "Support Multilingue"
+multilingual_support_desc: "Notre équipe parle votre langue pour un accompagnement optimal."
+
+# Contact page
+contact_us: "Contactez-nous"
+contact_page_description: "Notre équipe d'experts est à votre disposition pour répondre à toutes vos questions et vous accompagner dans votre projet."
+
+get_in_touch: "Prenez contact"
+address: "Adresse"
+phone: "Téléphone"
+email: "Email"
+whatsapp: "WhatsApp"
+business_hours: "Heures d'ouverture"
+monday_friday: "Lundi - Vendredi"
+saturday: "Samedi"
+sunday: "Dimanche"
+closed: "Fermé"
+
+chat_on_whatsapp: "Discuter sur WhatsApp"
+call_now: "Appeler maintenant"
+send_us_message: "Envoyez-nous un message"
+
+first_name: "Prénom"
+last_name: "Nom"
+country: "Pays"
+select_country: "Sélectionner un pays"
+interested_service: "Service d'intérêt"
+select_service: "Sélectionner un service"
+message: "Message"
+message_placeholder: "Décrivez votre projet, vos attentes et toute information utile..."
+subscribe_newsletter: "S'abonner à la newsletter"
+accept_privacy_policy: "J'accepte la politique de confidentialité"
+send_message: "Envoyer le message"
+other: "Autre"
+
+interested_in_service: "Intéressé par un service ?"
+contact_us_for_personalized_quote: "Contactez-nous pour un devis personnalisé et gratuit."
+
+# FAQ
+frequently_asked_questions: "Questions Fréquemment Posées"
+faq_description: "Trouvez les réponses aux questions les plus courantes sur nos services."
+
+faq_question_1: "Combien de temps dure un séjour médical en Turquie ?"
+faq_answer_1: "La durée varie selon l'intervention : 3-5 jours pour une greffe de cheveux, 5-7 jours pour des soins dentaires, 7-14 jours pour une chirurgie esthétique."
+
+faq_question_2: "Quelle est la qualification des chirurgiens ?"
+faq_answer_2: "Tous nos chirurgiens partenaires sont certifiés par le ministère turc de la Santé et possèdent des certifications internationales dans leur spécialité."
+
+faq_question_3: "Les prix incluent-ils l'hébergement ?"
+faq_answer_3: "Oui, nos forfaits incluent l'hébergement dans des hôtels 4-5 étoiles, les transferts et l'accompagnement complet."
+
+faq_question_4: "Y a-t-il des garanties sur les interventions ?"
+faq_answer_4: "Nous offrons des garanties spécifiques selon le type d'intervention et un suivi post-opératoire personnalisé."
+
+message_sent_successfully: "Message envoyé avec succès !"
+
+# About page
+about_bodyluxa: "À propos de BodyLuxa"
+about_page_description: "Découvrez l'histoire, les valeurs et l'équipe qui font de BodyLuxa votre partenaire de confiance."
+
+our_story: "Notre Histoire"
+about_story_default: "BodyLuxa est née de la volonté de démocratiser l'accès aux soins médicaux et esthétiques de qualité. Fondée par des professionnels passionnés, notre agence accompagne depuis plus de 5 ans des patients du monde entier dans leur parcours de transformation."
+
+about_mission_default: "Notre mission est de vous offrir l'excellence médicale à prix accessible, dans un cadre sécurisé et avec un accompagnement personnalisé. Nous croyons que chacun mérite d'avoir accès aux meilleurs soins, sans compromis sur la qualité."
+
+happy_patients: "Patients Heureux"
+expert_doctors: "Médecins Experts"
+award_winning: "Primé"
+fully_accredited: "Entièrement Accrédité"
+
+our_values: "Nos Valeurs"
+values_description: "Les principes qui guident notre action au quotidien."
+
+compassion: "Compassion"
+compassion_desc: "Nous plaçons l'humain au cœur de nos préoccupations et accompagnons chaque patient avec empathie."
+
+excellence: "Excellence"
+excellence_desc: "Nous sélectionnons rigoureusement nos partenaires pour garantir des soins de la plus haute qualité."
+
+trust: "Confiance"
+trust_desc: "Transparence, honnêteté et respect de nos engagements sont les piliers de notre relation client."
+
+our_team: "Notre Équipe"
+team_description: "Des professionnels dévoués à votre service pour un accompagnement d'exception."
+
+chief_medical_officer: "Directeur Médical"
+surgical_specialist: "Spécialiste Chirurgical"
+patient_coordinator: "Coordinatrice Patients"
+travel_coordinator: "Coordinateur Voyage"
+
+team_member_1_bio: "15 ans d'expérience en chirurgie esthétique et coordination médicale internationale."
+team_member_2_bio: "Spécialiste en chirurgie plastique avec plus de 1000 interventions réussies."
+team_member_3_bio: "Accompagnement personnalisé et suivi post-opératoire de nos patients."
+team_member_4_bio: "Organisation complète de votre séjour médical en Turquie."
+
+certifications_partnerships: "Certifications et Partenariats"
+certifications_description: "Nos accréditations témoignent de notre engagement envers l'excellence."
+
+what_patients_say: "Ce que disent nos patients"
+testimonials_description: "Les témoignages authentiques de ceux qui nous ont fait confiance."
+
+testimonial_1: "Une expérience exceptionnelle du début à la fin. Résultats parfaits et équipe très professionnelle. Je recommande vivement !"
+testimonial_2: "Service impeccable, clinique moderne et résultats au-delà de mes attentes. Merci à toute l'équipe BodyLuxa !"
+testimonial_3: "Accompagnement parfait, prix très compétitifs et qualité irréprochable. Une expérience à renouveler sans hésitation."

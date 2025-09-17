@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{{ config.getWebsiteTitle() }}{% endblock %}</title>
+        <meta name="description" content="{% block description %}{{ config.getWebsiteDescription() }}{% endblock %}">
+        
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {% block stylesheets %}
+            {{ importmap('app') }}
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+            <style>
+                :root {
+                    --primary-color: #2c3e50;
+                    --secondary-color: #e74c3c;
+                    --accent-color: #3498db;
+                    --success-color: #27ae60;
+                    --warning-color: #f39c12;
+                    --text-color: #333;
+                    --light-bg: #f8f9fa;
+                    --white: #ffffff;
+                }
+                
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                
+                body {
+                    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                    line-height: 1.6;
+                    color: var(--text-color);
+                    background-color: var(--white);
+                }
+                
+                .navbar {
+                    background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                    padding: 1rem 0;
+                }
+                
+                .navbar-brand {
+                    font-weight: 700;
+                    font-size: 1.8rem;
+                    color: var(--white) !important;
+                    text-decoration: none;
+                }
+                
+                .navbar-nav .nav-link {
+                    color: rgba(255,255,255,0.9) !important;
+                    font-weight: 500;
+                    margin: 0 0.5rem;
+                    transition: all 0.3s ease;
+                    position: relative;
+                }
+                
+                .navbar-nav .nav-link:hover {
+                    color: var(--white) !important;
+                    transform: translateY(-2px);
+                }
+                
+                .navbar-nav .nav-link.active {
+                    color: var(--white) !important;
+                }
+                
+                .btn-primary {
+                    background: linear-gradient(135deg, var(--secondary-color) 0%, #c0392b 100%);
+                    border: none;
+                    border-radius: 25px;
+                    padding: 12px 30px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    transition: all 0.3s ease;
+                }
+                
+                .btn-primary:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 10px 25px rgba(231, 76, 60, 0.3);
+                }
+                
+                .btn-outline-primary {
+                    border: 2px solid var(--primary-color);
+                    color: var(--primary-color);
+                    border-radius: 25px;
+                    padding: 12px 30px;
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+                }
+                
+                .btn-outline-primary:hover {
+                    background-color: var(--primary-color);
+                    transform: translateY(-2px);
+                }
+                
+                .hero-section {
+                    background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(52, 73, 94, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23f8f9fa;stop-opacity:0.1" /><stop offset="100%" style="stop-color:%23e9ecef;stop-opacity:0.1" /></linearGradient></defs><rect width="1000" height="1000" fill="url(%23grad1)"/></svg>');
+                    background-size: cover;
+                    background-position: center;
+                    color: var(--white);
+                    padding: 100px 0;
+                    position: relative;
+                    overflow: hidden;
+                }
+                
+                .hero-section::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(45deg, transparent 30%, rgba(52, 152, 219, 0.1) 70%);
+                    pointer-events: none;
+                }
+                
+                .hero-content {
+                    position: relative;
+                    z-index: 2;
+                }
+                
+                .service-card {
+                    background: var(--white);
+                    border-radius: 15px;
+                    padding: 2rem;
+                    text-align: center;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                    transition: all 0.3s ease;
+                    border: none;
+                    height: 100%;
+                }
+                
+                .service-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+                }
+                
+                .service-icon {
+                    width: 80px;
+                    height: 80px;
+                    background: linear-gradient(135deg, var(--accent-color), #2980b9);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto 1.5rem;
+                    color: var(--white);
+                    font-size: 2rem;
+                }
+                
+                .section-title {
+                    position: relative;
+                    text-align: center;
+                    margin-bottom: 3rem;
+                }
+                
+                .section-title h2 {
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    color: var(--primary-color);
+                    margin-bottom: 1rem;
+                }
+                
+                .section-title::after {
+                    content: '';
+                    width: 80px;
+                    height: 4px;
+                    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+                    display: block;
+                    margin: 1rem auto;
+                    border-radius: 2px;
+                }
+                
+                .footer {
+                    background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+                    color: var(--white);
+                    padding: 3rem 0 1rem;
+                    margin-top: 4rem;
+                }
+                
+                .footer a {
+                    color: rgba(255,255,255,0.8);
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                }
+                
+                .footer a:hover {
+                    color: var(--white);
+                }
+                
+                .language-selector {
+                    margin-left: 1rem;
+                }
+                
+                .language-selector .dropdown-toggle {
+                    background: transparent;
+                    border: 1px solid rgba(255,255,255,0.3);
+                    color: var(--white);
+                    border-radius: 20px;
+                    padding: 8px 15px;
+                }
+                
+                @media (max-width: 768px) {
+                    .hero-section {
+                        padding: 60px 0;
+                    }
+                    
+                    .hero-section h1 {
+                        font-size: 2rem;
+                    }
+                    
+                    .section-title h2 {
+                        font-size: 2rem;
+                    }
+                    
+                    .navbar-brand {
+                        font-size: 1.5rem;
+                    }
+                }
+            </style>
+        {% endblock %}
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('home') }}">
+                    <i class="fas fa-heartbeat me-2"></i>
+                    BodyLuxa
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link {% if app.request.get('_route') == 'home' %}active{% endif %}" href="{{ path('home') }}">
+                                {{ 'home'|trans }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if app.request.get('_route') == 'services' %}active{% endif %}" href="{{ path('services') }}">
+                                {{ 'services'|trans }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if app.request.get('_route') == 'about' %}active{% endif %}" href="{{ path('about') }}">
+                                {{ 'about'|trans }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if app.request.get('_route') == 'contact' %}active{% endif %}" href="{{ path('contact') }}">
+                                {{ 'contact'|trans }}
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <div class="d-flex align-items-center">
+                        <a href="tel:{{ config.getContactPhone() }}" class="btn btn-primary me-3">
+                            <i class="fas fa-phone me-2"></i>{{ 'call_us'|trans }}
+                        </a>
+                        
+                        <div class="language-selector dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-globe me-2"></i>{{ app.request.locale|upper }}
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ path(app.request.get('_route'), app.request.query.all|merge({'_locale': 'fr'})) }}">🇫🇷 Français</a></li>
+                                <li><a class="dropdown-item" href="{{ path(app.request.get('_route'), app.request.query.all|merge({'_locale': 'en'})) }}">🇬🇧 English</a></li>
+                                <li><a class="dropdown-item" href="{{ path(app.request.get('_route'), app.request.query.all|merge({'_locale': 'tr'})) }}">🇹🇷 Türkçe</a></li>
+                                <li><a class="dropdown-item" href="{{ path(app.request.get('_route'), app.request.query.all|merge({'_locale': 'de'})) }}">🇩🇪 Deutsch</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main style="padding-top: 80px;">
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <h5 class="mb-3">
+                            <i class="fas fa-heartbeat me-2"></i>
+                            BodyLuxa
+                        </h5>
+                        <p class="mb-3">{{ config.getWebsiteDescription() }}</p>
+                        <div class="d-flex">
+                            <a href="#" class="me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                            <a href="#" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="#" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#" class="me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h6 class="mb-3">{{ 'quick_links'|trans }}</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="{{ path('home') }}">{{ 'home'|trans }}</a></li>
+                            <li class="mb-2"><a href="{{ path('services') }}">{{ 'services'|trans }}</a></li>
+                            <li class="mb-2"><a href="{{ path('about') }}">{{ 'about'|trans }}</a></li>
+                            <li class="mb-2"><a href="{{ path('contact') }}">{{ 'contact'|trans }}</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <h6 class="mb-3">{{ 'services'|trans }}</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#">{{ 'hair_transplant'|trans }}</a></li>
+                            <li class="mb-2"><a href="#">{{ 'dental_care'|trans }}</a></li>
+                            <li class="mb-2"><a href="#">{{ 'cosmetic_surgery'|trans }}</a></li>
+                            <li class="mb-2"><a href="#">{{ 'beauty_care'|trans }}</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 mb-4">
+                        <h6 class="mb-3">{{ 'contact_info'|trans }}</h6>
+                        <div class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            {{ config.getCompanyAddress() }}
+                        </div>
+                        <div class="mb-2">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:{{ config.getContactPhone() }}">{{ config.getContactPhone() }}</a>
+                        </div>
+                        <div class="mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:{{ config.getContactEmail() }}">{{ config.getContactEmail() }}</a>
+                        </div>
+                        <div class="mb-2">
+                            <i class="fab fa-whatsapp me-2"></i>
+                            <a href="https://wa.me/{{ config.getWhatsappNumber() }}" target="_blank">{{ 'whatsapp'|trans }}</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+                
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; {{ 'now'|date('Y') }} BodyLuxa. {{ 'all_rights_reserved'|trans }}</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="me-3">{{ 'privacy_policy'|trans }}</a>
+                        <a href="#">{{ 'terms_of_service'|trans }}</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        {% block javascripts %}
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            {{ importmap('app') }}
+        {% endblock %}
+    </body>
+</html>

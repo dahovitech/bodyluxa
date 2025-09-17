@@ -1,0 +1,244 @@
+# Turkish messages for BodyLuxa
+
+# Navigation
+home: "Ana Sayfa"
+services: "Hizmetler"
+about: "Hakkımızda"
+contact: "İletişim"
+call_us: "Bizi Arayın"
+quick_links: "Hızlı Linkler"
+contact_info: "İletişim Bilgisi"
+all_rights_reserved: "Tüm hakları saklıdır"
+privacy_policy: "Gizlilik Politikası"
+terms_of_service: "Hizmet Şartları"
+
+# Homepage
+medical_tourism_expert: "Medikal Turizm Uzmanı"
+hero_title: "Doğal güzelliğinizi artırın"
+hero_description_default: "Türkiye'de kaliteli tıbbi ve estetik bakım için güvenilir ortağınız. Rakipsiz fiyatlar, olağanüstü sonuçlar."
+discover_services: "Hizmetlerimizi keşfedin"
+get_quote: "Teklif alın"
+based_on_reviews: "değerlendirmelere dayalı"
+satisfied_patients: "memnun hasta"
+medical_tourism: "Medikal turizm"
+satisfaction: "Memnuniyet"
+years_experience: "yıl deneyim"
+
+# Services
+our_services: "Hizmetlerimiz"
+services_description: "Türkiye'nin en iyi uzmanlarıyla eksiksiz tıbbi ve estetik hizmet yelpazemizi keşfedin."
+services_page_description: "Akredite kliniklerde tanınmış uzmanlar tarafından gerçekleştirilen son teknoloji tıbbi ve estetik hizmetlerimizi keşfedin."
+
+hair_transplant: "Saç Ekimi"
+hair_transplant_desc: "En son nesil FUE ve DHI teknikleriyle yoğun saçlara kavuşun."
+hair_transplant_detailed_desc: "Uzmanlarımız doğal ve kalıcı sonuçlar garanti etmek için en gelişmiş teknikleri kullanıyor."
+
+dental_care: "Diş Bakımı"
+dental_care_desc: "Kapsamlı diş tedavilerimiz ve kaliteli implantlarımızla gülümsemenizi geri kazanın."
+dental_care_detailed_desc: "En modern teknolojilerle yapılan implant, kron, kaplamalar ve beyazlatma."
+
+cosmetic_surgery: "Estetik Cerrahi"
+cosmetic_surgery_desc: "Özel estetik müdahalelerimizle silüetinizi güzelleştirin."
+cosmetic_surgery_detailed_desc: "Deneyimli cerrahlar tarafından optimal koşullarda gerçekleştirilen kişiselleştirilmiş müdahaleler."
+
+eye_surgery: "Göz Cerrahisi"
+eye_surgery_desc: "Oftalmolojik müdahalelerimizle mükemmel görüşe kavuşun."
+eye_surgery_detailed_desc: "Katarakt cerrahisi, LASIK ve görüşünüzü iyileştiren diğer tedaviler."
+
+bariatric_surgery: "Bariatrik Cerrahi"
+bariatric_surgery_desc: "Uyarlanmış cerrahi çözümlerimizle sürdürülebilir kilo verin."
+bariatric_surgery_detailed_desc: "Sağlıklı kiloya kavuşmanıza yardımcı olacak sleeve, bypass ve diğer teknikler."
+
+ivf_treatment: "Tüp Bebek Tedavisi"
+ivf_treatment_desc: "Gelişmiş fertilite tedavilerimizle ebeveynlik hayalinizi gerçekleştirin."
+ivf_treatment_detailed_desc: "Yardımcı üreme teknolojisi yolculuğunuz için eksiksiz destek."
+
+learn_more: "Daha fazla bilgi"
+starting_from: "Başlangıç"
+
+# Service details
+fue_technique: "FUE Tekniği"
+dhi_technique: "DHI Tekniği"
+beard_transplant: "Sakal ekimi"
+eyebrow_transplant: "Kaş ekimi"
+dental_implants: "Diş implantları"
+veneers: "Diş kaplamaları"
+dental_crowns: "Diş kronları"
+teeth_whitening: "Diş beyazlatma"
+rhinoplasty: "Burun estetiği"
+breast_augmentation: "Meme büyütme"
+liposuction: "Liposuction"
+facelift: "Yüz germe"
+lasik_surgery: "LASIK cerrahisi"
+cataract_surgery: "Katarakt cerrahisi"
+blepharoplasty: "Göz kapağı estetiği"
+retinal_treatment: "Retina tedavisi"
+gastric_sleeve: "Mide küçültme"
+gastric_bypass: "Mide bypass"
+gastric_balloon: "Mide balonu"
+mini_gastric_bypass: "Mini mide bypass"
+in_vitro_fertilization: "Tüp bebek"
+egg_donation: "Yumurta bağışı"
+sperm_donation: "Sperm bağışı"
+embryo_transfer: "Embriyo transferi"
+
+# Why choose us
+why_choose_us: "Neden Bizi Seçmelisiniz?"
+why_choose_us_desc: "BodyLuxa'yı tıbbi yolculuğunuz için ideal ortağınız yapan avantajları keşfedin."
+
+quality_guarantee: "Kalite Garantisi"
+quality_guarantee_desc: "Ortak kliniklerimiz akredite edilmiştir ve en yüksek uluslararası standartları karşılar."
+
+expert_surgeons: "Uzman Cerrahlar"
+expert_surgeons_desc: "Doktorlarımız sertifikalıdır ve alanlarında tanınmış uzmanlığa sahiptir."
+
+24_7_support: "24/7 Destek"
+24_7_support_desc: "Ekibimiz tıbbi konaklama öncesi, sırası ve sonrasında size destek verir."
+
+complete_package: "Tam Paket"
+complete_package_desc: "Paketlerimizde ulaşım, konaklama, bakım ve ameliyat sonrası takip dahildir."
+
+best_prices: "En İyi Fiyatlar"
+best_prices_desc: "Kaliteden ödün vermeden Avrupa tarifelerine göre %70'e varan tasarruf."
+
+accredited_clinics: "Akredite Klinikler"
+accredited_clinics_desc: "Tüm ortak kliniklerimiz uluslararası kuruluşlar tarafından sertifikalandırılmıştır."
+
+# Process
+our_process: "Sürecimiz"
+process_description: "Tıbbi yolculuğunuz için 4 basit adımda kişiselleştirilmiş destek."
+
+step_consultation: "Konsültasyon"
+step_consultation_desc: "Durumunuzun ücretsiz değerlendirmesi ve kişiselleştirilmiş öneriler."
+
+step_planning: "Planlama"
+step_planning_desc: "Tam destekle konaklama organizasyonu."
+
+step_treatment: "Tedavi"
+step_treatment_desc: "Uzman cerrahlarımız tarafından gerçekleştirilen müdahale."
+
+step_followup: "Takip"
+step_followup_desc: "Ameliyat sonrası bakım ve uzun vadeli takip."
+
+# Call to action
+ready_to_start: "Dönüşümünüze başlamaya hazır mısınız?"
+cta_description: "Ücretsiz ve kişiselleştirilmiş konsültasyon için bugün bizimle iletişime geçin."
+book_consultation: "Konsültasyon rezervasyonu"
+
+# Why Turkey
+why_turkey: "Neden Türkiye?"
+why_turkey_desc: "İstanbul, eşsiz avantajlarla medikal turizm için tercih edilen destinasyon."
+
+cost_effective: "Uygun Maliyetli"
+cost_effective_desc: "Avrupa tarifelerine göre %70'e varan tasarruf."
+
+world_class_facilities: "Dünya Standartlarında Tesisler"
+world_class_facilities_desc: "En son teknolojilerle donatılmış modern klinikler."
+
+strategic_location: "Stratejik Konum"
+strategic_location_desc: "Avrupa ve Asya'nın kavşağında, kolay erişilebilir."
+
+multilingual_support: "Çok Dilli Destek"
+multilingual_support_desc: "Ekibimiz optimal destek için dilinizi konuşuyor."
+
+# Contact page
+contact_us: "Bizimle İletişime Geçin"
+contact_page_description: "Uzman ekibimiz tüm sorularınızı yanıtlamak ve projenizde size destek olmak için hizmetinizde."
+
+get_in_touch: "İletişime Geçin"
+address: "Adres"
+phone: "Telefon"
+email: "E-posta"
+whatsapp: "WhatsApp"
+business_hours: "Çalışma Saatleri"
+monday_friday: "Pazartesi - Cuma"
+saturday: "Cumartesi"
+sunday: "Pazar"
+closed: "Kapalı"
+
+chat_on_whatsapp: "WhatsApp'ta sohbet edin"
+call_now: "Şimdi arayın"
+send_us_message: "Bize mesaj gönderin"
+
+first_name: "Ad"
+last_name: "Soyad"
+country: "Ülke"
+select_country: "Ülke seçin"
+interested_service: "İlgilenilen Hizmet"
+select_service: "Hizmet seçin"
+message: "Mesaj"
+message_placeholder: "Projenizi, beklentilerinizi ve faydalı bilgileri açıklayın..."
+subscribe_newsletter: "Bültene abone ol"
+accept_privacy_policy: "Gizlilik politikasını kabul ediyorum"
+send_message: "Mesaj Gönder"
+other: "Diğer"
+
+interested_in_service: "Bir hizmete ilgi mi duyuyorsunuz?"
+contact_us_for_personalized_quote: "Kişiselleştirilmiş ve ücretsiz teklif için bizimle iletişime geçin."
+
+# FAQ
+frequently_asked_questions: "Sık Sorulan Sorular"
+faq_description: "Hizmetlerimiz hakkında en yaygın soruların yanıtlarını bulun."
+
+faq_question_1: "Türkiye'de tıbbi konaklama ne kadar sürer?"
+faq_answer_1: "Süre prosedüre göre değişir: saç ekimi için 3-5 gün, diş bakımı için 5-7 gün, estetik cerrahi için 7-14 gün."
+
+faq_question_2: "Cerrahların nitelikleri nelerdir?"
+faq_answer_2: "Tüm ortak cerrahlarımız Türk Sağlık Bakanlığı tarafından sertifikalandırılmış ve uzmanlık alanlarında uluslararası sertifikalara sahiptir."
+
+faq_question_3: "Fiyatlara konaklama dahil mi?"
+faq_answer_3: "Evet, paketlerimiz 4-5 yıldızlı otellerde konaklama, transferler ve tam destek dahildir."
+
+faq_question_4: "Prosedürler için garanti var mı?"
+faq_answer_4: "Prosedür türüne göre özel garantiler ve kişiselleştirilmiş ameliyat sonrası takip sunuyoruz."
+
+message_sent_successfully: "Mesaj başarıyla gönderildi!"
+
+# About page
+about_bodyluxa: "BodyLuxa Hakkında"
+about_page_description: "BodyLuxa'yı güvenilir ortağınız yapan hikaye, değerler ve ekibi keşfedin."
+
+our_story: "Hikayemiz"
+about_story_default: "BodyLuxa, kaliteli tıbbi ve estetik bakıma erişimi demokratikleştirme arzusundan doğdu. Tutkulu profesyoneller tarafından kurulan ajansımız, 5 yılı aşkın süredir dünyanın dört bir yanından hastaları dönüşüm yolculuklarında destekliyor."
+
+about_mission_default: "Misyonumuz size güvenli ortamda ve kişiselleştirilmiş destekle uygun fiyatta tıbbi mükemmellik sunmaktır. Herkesin kaliteden ödün vermeden en iyi bakıma erişmeyi hak ettiğine inanıyoruz."
+
+happy_patients: "Mutlu Hastalar"
+expert_doctors: "Uzman Doktorlar"
+award_winning: "Ödüllü"
+fully_accredited: "Tam Akredite"
+
+our_values: "Değerlerimiz"
+values_description: "Günlük eylemlerimizi yönlendiren ilkeler."
+
+compassion: "Şefkat"
+compassion_desc: "İnsanı endişelerimizin merkezine yerleştiriyoruz ve her hastayı empatiyle destekliyoruz."
+
+excellence: "Mükemmellik"
+excellence_desc: "En yüksek kalitede bakım garanti etmek için ortaklarımızı titizlikle seçiyoruz."
+
+trust: "Güven"
+trust_desc: "Şeffaflık, dürüstlük ve taahhütlerimize saygı müşteri ilişkimizin temel taşlarıdır."
+
+our_team: "Ekibimiz"
+team_description: "Olağanüstü destek için hizmetinizde özel profesyoneller."
+
+chief_medical_officer: "Baş Hekim"
+surgical_specialist: "Cerrahi Uzmanı"
+patient_coordinator: "Hasta Koordinatörü"
+travel_coordinator: "Seyahat Koordinatörü"
+
+team_member_1_bio: "Estetik cerrahi ve uluslararası tıbbi koordinasyonda 15 yıl deneyim."
+team_member_2_bio: "1000'den fazla başarılı prosedürü olan plastik cerrahi uzmanı."
+team_member_3_bio: "Hastalarımızın kişiselleştirilmiş desteği ve ameliyat sonrası takibi."
+team_member_4_bio: "Türkiye'deki tıbbi konaklama organizasyonunuzun tamamı."
+
+certifications_partnerships: "Sertifikasyonlar ve Ortaklıklar"
+certifications_description: "Akreditasyonlarımız mükemmelliğe olan bağlılığımızı kanıtlıyor."
+
+what_patients_say: "Hastalarımız Ne Diyor"
+testimonials_description: "Bize güvenen kişilerden otantik testimonials."
+
+testimonial_1: "Baştan sona olağanüstü bir deneyim. Mükemmel sonuçlar ve çok profesyonel ekip. Şiddetle tavsiye ederim!"
+testimonial_2: "Kusursuz hizmet, modern klinik ve beklentilerimin ötesinde sonuçlar. Tüm BodyLuxa ekibine teşekkürler!"
+testimonial_3: "Mükemmel destek, çok rekabetçi fiyatlar ve kusursuz kalite. Tereddüt etmeden tekrarlanacak bir deneyim."

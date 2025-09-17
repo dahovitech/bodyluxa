@@ -1,0 +1,340 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'about'|trans }} - {{ config.getWebsiteTitle() }}{% endblock %}
+
+{% block body %}
+<!-- Hero Section -->
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4">{{ 'about_bodyluxa'|trans }}</h1>
+                <p class="lead">{{ 'about_page_description'|trans }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=About+BodyLuxa" 
+                         alt="{{ 'about_bodyluxa'|trans }}" 
+                         class="img-fluid rounded-3 shadow-lg">
+                    
+                    <!-- Statistics Cards -->
+                    <div class="position-absolute bottom-0 start-0 bg-primary text-white p-3 rounded-3 shadow" style="margin: -30px;">
+                        <h4 class="mb-0">5000+</h4>
+                        <small>{{ 'happy_patients'|trans }}</small>
+                    </div>
+                    
+                    <div class="position-absolute top-0 end-0 bg-success text-white p-3 rounded-3 shadow" style="margin: -20px;">
+                        <h4 class="mb-0">50+</h4>
+                        <small>{{ 'expert_doctors'|trans }}</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <h2 class="mb-4">{{ 'our_story'|trans }}</h2>
+                <p class="text-muted mb-4">
+                    {{ config.get('about_story') ?? ('about_story_default'|trans) }}
+                </p>
+                
+                <p class="text-muted mb-4">
+                    {{ config.get('about_mission') ?? ('about_mission_default'|trans) }}
+                </p>
+                
+                <div class="row g-4">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 60px; height: 60px;">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h6>{{ 'award_winning'|trans }}</h6>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 60px; height: 60px;">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h6>{{ 'fully_accredited'|trans }}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ 'our_values'|trans }}</h2>
+            <p class="lead text-muted">{{ 'values_description'|trans }}</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="text-center h-100">
+                    <div class="mb-4">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
+                            <i class="fas fa-heart fa-2x"></i>
+                        </div>
+                    </div>
+                    <h4 class="mb-3">{{ 'compassion'|trans }}</h4>
+                    <p class="text-muted">{{ 'compassion_desc'|trans }}</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="text-center h-100">
+                    <div class="mb-4">
+                        <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
+                            <i class="fas fa-star fa-2x"></i>
+                        </div>
+                    </div>
+                    <h4 class="mb-3">{{ 'excellence'|trans }}</h4>
+                    <p class="text-muted">{{ 'excellence_desc'|trans }}</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="text-center h-100">
+                    <div class="mb-4">
+                        <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
+                            <i class="fas fa-handshake fa-2x"></i>
+                        </div>
+                    </div>
+                    <h4 class="mb-3">{{ 'trust'|trans }}</h4>
+                    <p class="text-muted">{{ 'trust_desc'|trans }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ 'our_team'|trans }}</h2>
+            <p class="lead text-muted">{{ 'team_description'|trans }}</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card text-center">
+                    <div class="team-image mb-3">
+                        <img src="https://via.placeholder.com/250x250/3498db/ffffff?text=Dr.+Smith" 
+                             alt="Dr. John Smith" 
+                             class="img-fluid rounded-circle">
+                    </div>
+                    <h5>Dr. John Smith</h5>
+                    <p class="text-primary">{{ 'chief_medical_officer'|trans }}</p>
+                    <p class="text-muted small">{{ 'team_member_1_bio'|trans }}</p>
+                    <div class="social-links">
+                        <a href="#" class="me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card text-center">
+                    <div class="team-image mb-3">
+                        <img src="https://via.placeholder.com/250x250/e74c3c/ffffff?text=Dr.+Johnson" 
+                             alt="Dr. Emily Johnson" 
+                             class="img-fluid rounded-circle">
+                    </div>
+                    <h5>Dr. Emily Johnson</h5>
+                    <p class="text-primary">{{ 'surgical_specialist'|trans }}</p>
+                    <p class="text-muted small">{{ 'team_member_2_bio'|trans }}</p>
+                    <div class="social-links">
+                        <a href="#" class="me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card text-center">
+                    <div class="team-image mb-3">
+                        <img src="https://via.placeholder.com/250x250/27ae60/ffffff?text=Sarah+Wilson" 
+                             alt="Sarah Wilson" 
+                             class="img-fluid rounded-circle">
+                    </div>
+                    <h5>Sarah Wilson</h5>
+                    <p class="text-primary">{{ 'patient_coordinator'|trans }}</p>
+                    <p class="text-muted small">{{ 'team_member_3_bio'|trans }}</p>
+                    <div class="social-links">
+                        <a href="#" class="me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card text-center">
+                    <div class="team-image mb-3">
+                        <img src="https://via.placeholder.com/250x250/9b59b6/ffffff?text=Mike+Brown" 
+                             alt="Mike Brown" 
+                             class="img-fluid rounded-circle">
+                    </div>
+                    <h5>Mike Brown</h5>
+                    <p class="text-primary">{{ 'travel_coordinator'|trans }}</p>
+                    <p class="text-muted small">{{ 'team_member_4_bio'|trans }}</p>
+                    <div class="social-links">
+                        <a href="#" class="me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ 'certifications_partnerships'|trans }}</h2>
+            <p class="lead text-muted">{{ 'certifications_description'|trans }}</p>
+        </div>
+        
+        <div class="row align-items-center">
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <img src="https://via.placeholder.com/120x80/666666/ffffff?text=ISO" alt="ISO Certification" class="img-fluid opacity-75">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <img src="https://via.placeholder.com/120x80/666666/ffffff?text=JCI" alt="JCI Accreditation" class="img-fluid opacity-75">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <img src="https://via.placeholder.com/120x80/666666/ffffff?text=TURSAB" alt="TURSAB" class="img-fluid opacity-75">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <img src="https://via.placeholder.com/120x80/666666/ffffff?text=MOH" alt="Ministry of Health" class="img-fluid opacity-75">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <img src="https://via.placeholder.com/120x80/666666/ffffff?text=ISHRS" alt="ISHRS" class="img-fluid opacity-75">
+            </div>
+            <div class="col-lg-2 col-md-4 col-6 text-center mb-4">
+                <img src="https://via.placeholder.com/120x80/666666/ffffff?text=ISAPS" alt="ISAPS" class="img-fluid opacity-75">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="section-title">
+            <h2>{{ 'what_patients_say'|trans }}</h2>
+            <p class="lead text-muted">{{ 'testimonials_description'|trans }}</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="testimonial-card p-4 rounded-3 shadow-sm h-100">
+                    <div class="d-flex text-warning mb-3">
+                        {% for i in 1..5 %}
+                            <i class="fas fa-star"></i>
+                        {% endfor %}
+                    </div>
+                    <p class="mb-3">{{ 'testimonial_1'|trans }}</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/50x50/3498db/ffffff?text=JD" alt="John Doe" class="rounded-circle me-3">
+                        <div>
+                            <h6 class="mb-0">John Doe</h6>
+                            <small class="text-muted">{{ 'hair_transplant'|trans }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="testimonial-card p-4 rounded-3 shadow-sm h-100">
+                    <div class="d-flex text-warning mb-3">
+                        {% for i in 1..5 %}
+                            <i class="fas fa-star"></i>
+                        {% endfor %}
+                    </div>
+                    <p class="mb-3">{{ 'testimonial_2'|trans }}</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/50x50/e74c3c/ffffff?text=MS" alt="Maria Smith" class="rounded-circle me-3">
+                        <div>
+                            <h6 class="mb-0">Maria Smith</h6>
+                            <small class="text-muted">{{ 'dental_care'|trans }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="testimonial-card p-4 rounded-3 shadow-sm h-100">
+                    <div class="d-flex text-warning mb-3">
+                        {% for i in 1..5 %}
+                            <i class="fas fa-star"></i>
+                        {% endfor %}
+                    </div>
+                    <p class="mb-3">{{ 'testimonial_3'|trans }}</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/50x50/27ae60/ffffff?text=PJ" alt="Pierre Janvier" class="rounded-circle me-3">
+                        <div>
+                            <h6 class="mb-0">Pierre Janvier</h6>
+                            <small class="text-muted">{{ 'cosmetic_surgery'|trans }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.team-card {
+    transition: transform 0.3s ease;
+    padding: 2rem 1rem;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.social-links a {
+    color: #6c757d;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.testimonial-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+</style>
+{% endblock %}
