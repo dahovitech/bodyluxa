@@ -78,6 +78,10 @@ npm run build
 
 7. **Démarrer le serveur de développement**
 ```bash
+# Vider le cache Symfony
+php bin/console cache:clear
+
+# Démarrer le serveur
 symfony serve
 # ou
 php -S localhost:8000 -t public
