@@ -1,183 +1,155 @@
-# Oragon - Interface d'Administration Multilingue
+# BodyLuxa - Medical Tourism Platform
 
-Application Symfony 7.3 développée par **Prudence ASSOGBA** pour la gestion de contenu multilingue avec une interface d'administration verticale, simple et hautement ergonomique.
+BodyLuxa est une plateforme moderne de tourisme médical développée avec Symfony 7.3, inspirée de l'expertise de Body Expert. Cette application web offre une expérience utilisateur exceptionnelle pour les patients recherchant des soins médicaux et esthétiques de qualité en Turquie.
 
-## 🌟 Fonctionnalités
+## 🌟 Fonctionnalités Principales
 
-### Interface d'Administration
-- **Tableau de bord** avec statistiques des services et traductions
-- **Gestion des langues** : ajout, désactivation, définition de langue par défaut
-- **Gestion des services multilingues** avec éditeur par onglets
-- **Interface responsive** avec mode sombre/clair
-- **Système de navigation** ergonomique et intuitif
+### 🏥 Services Médicaux
+- **Greffe de Cheveux** : Techniques FUE et DHI de dernière génération
+- **Soins Dentaires** : Implants, couronnes, facettes, blanchiment
+- **Chirurgie Esthétique** : Rhinoplastie, augmentation mammaire, liposuccion
+- **Chirurgie Oculaire** : LASIK, cataracte, blépharoplastie
+- **Chirurgie Bariatrique** : Sleeve, bypass, ballon gastrique
+- **Fécondation In Vitro** : Traitements de fertilité avancés
 
-### Gestion Multilingue
-- **Support multi-langues** avec fallback automatique
-- **Éditeur de traductions** avec onglets par langue
-- **Indicateurs visuels** de complétude des traductions
-- **Sélecteur de langue** dynamique côté utilisateur
+### 🌍 Multi-langue
+- **Français** (par défaut)
+- **Anglais**
+- **Allemand** 
+- **Turc**
 
-### Interface Publique
-- **Affichage adaptatif** selon la langue sélectionnée
-- **Recherche** dans les contenus multilingues
-- **Changement de langue** en temps réel
-- **Fallback intelligent** vers la langue de référence
+### ⚙️ Personnalisation Dynamique
+- Entité `Config` pour la personnalisation des informations
+- Traductions dynamiques avec l'entité `ConfigTranslation`
+- Interface d'administration pour la gestion de contenu
 
 ## 🛠 Technologies Utilisées
 
-### Backend
-- **Symfony 7.3** (PHP 8.2+)
-- **Doctrine ORM** avec Doctrine Migrations
-- **Symfony Forms & Validator**
-- **SQLite** pour la persistance
+- **Framework** : Symfony 7.3
+- **Frontend** : Webpack Encore, Bootstrap 5, FontAwesome
+- **Base de données** : SQLite (développement)
+- **Templating** : Twig
+- **Traductions** : Symfony Translation Component
+- **Styling** : CSS personnalisé avec design responsive
 
-### Frontend
-- **Twig** pour le templating
-- **Bootstrap 5.3** + Bootstrap Icons
-- **Symfony UX** (Turbo et Stimulus)
-- **Axios** pour les appels API
-- **SCSS** pour les styles personnalisés
-
-### Outils de Développement
-- **Webpack Encore** pour la compilation des assets
-- **Doctrine Fixtures** pour les données de test
-- **Symfony UX Autocomplete** pour l'interactivité
-
-## 📦 Installation
+## 🚀 Installation
 
 ### Prérequis
 - PHP 8.2 ou supérieur
 - Composer
-- Node.js et npm (pour les assets)
+- Node.js et npm/yarn
 - SQLite
 
-### Installation
+### Étapes d'installation
+
+1. **Cloner le repository**
 ```bash
-# Cloner le projet
-git clone https://github.com/dahovitech/oragon.git
-cd oragon
-
-# Installer les dépendances PHP
-composer install
-
-# Installer les dépendances JavaScript
-npm install
-
-# Configurer la base de données
-cp .env .env.local
-# Ajuster la configuration DATABASE_URL dans .env.local si nécessaire
-
-# Créer la base de données et exécuter les migrations
-php bin/console doctrine:database:create
-php bin/console doctrine:migrations:migrate
-
-# Charger les données de test
-php bin/console doctrine:fixtures:load
-
-# Compiler les assets
-npm run build
-
-# Lancer le serveur de développement
-php bin/console server:run
+git clone https://github.com/dahovitech/bodyluxa.git
+cd bodyluxa
 ```
 
-## 🗄 Structure de la Base de Données
+2. **Installer les dépendances PHP**
+```bash
+composer install
+```
+
+3. **Configurer l'environnement**
+```bash
+cp .env .env.local
+# Modifier les variables d'environnement si nécessaire
+```
+
+4. **Créer la base de données et exécuter les migrations**
+```bash
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
+```
+
+5. **Charger les fixtures (données de test)**
+```bash
+php bin/console doctrine:fixtures:load
+```
+
+6. **Installer et compiler les assets**
+```bash
+npm install
+npm run build
+```
+
+7. **Démarrer le serveur de développement**
+```bash
+symfony serve
+# ou
+php -S localhost:8000 -t public
+```
+
+## 📱 Design et Expérience Utilisateur
+
+### Inspiration Body Expert
+Le design s'inspire du site Body Expert avec :
+- Interface moderne et professionnelle
+- Navigation intuitive
+- Call-to-actions optimisés
+- Témoignages patients
+- Processus de traitement clair
+
+### Fonctionnalités UX
+- Design responsive (mobile-first)
+- Animations CSS fluides
+- Navigation multi-langue
+- Formulaires de contact optimisés
+- Intégration WhatsApp
+- Section FAQ interactive
+
+## 🏗 Architecture
 
 ### Entités Principales
+- **Language** : Gestion des langues
+- **Service** : Services médicaux
+- **ServiceTranslation** : Traductions des services
+- **Config** : Configuration dynamique du site
+- **ConfigTranslation** : Traductions des configurations
 
-#### Language
-- Code langue (ISO 639-1)
-- Nom et nom natif de la langue
-- Statut actif/inactif
-- Langue par défaut
-- Ordre d'affichage
+### Contrôleurs
+- **HomeController** : Pages principales (accueil, services, contact, à propos)
+- **ServiceController** : Gestion des services
+- **Admin Controllers** : Interface d'administration
 
-#### Service
-- Slug unique
-- Statut actif/inactif
-- Ordre d'affichage
-- Timestamps de création/modification
+### Services Métier
+- **ConfigService** : Gestion de la configuration dynamique
+- **TranslationService** : Gestion des traductions
 
-#### ServiceTranslation
-- Relation vers Service et Language
-- Titre, description et détail traduits
-- Contrainte d'unicité (service_id, language_id)
+## 🔧 Configuration Multi-langue
 
-## 🎨 Interface Utilisateur
+Les routes sont configurées avec préfixes de langue :
+- `/fr/` - Français (par défaut)
+- `/en/` - Anglais
+- `/de/` - Allemand
+- `/tr/` - Turc
 
-### Administration
-- **Sidebar verticale** avec navigation claire
-- **Mode sombre/clair** avec basculement
-- **Tableau de bord** avec statistiques en temps réel
-- **Éditeur par onglets** pour les traductions
-- **Actions rapides** et boutons contextuels
+## 👥 Équipe
 
-### Interface Publique
-- **Sélecteur de langue** avec noms natifs
-- **Recherche en temps réel** dans les contenus
-- **Cartes de services** avec design responsive
-- **Indicateurs de fallback** linguistique
+**Développé par** : Prudence ASSOGBA  
+**Email** : jprud67@gmail.com  
+**Pour** : BodyLuxa Medical Tourism
 
-## 🔧 Configuration
+## 📄 Licence
 
-### Langues Supportées (par défaut)
-- **Français** (fr) - Langue par défaut
-- **Anglais** (en)
-- **Espagnol** (es)
-- **Allemand** (de)
+Ce projet est propriétaire de BodyLuxa. Tous droits réservés.
 
-### Services d'Exemple
-1. **Consultation Web** - Services de consultation pour le développement web
-2. **Formation Symfony** - Formation complète au framework Symfony
-3. **Support Technique** - Support et maintenance d'applications
-4. **Intégration API** - Services d'intégration d'APIs tierces
-5. **Audit de Sécurité** - Audit de sécurité des applications web
+## 🤝 Contribution
 
-## 🚀 Utilisation
+Pour contribuer au projet, veuillez :
+1. Créer une branche feature
+2. Commiter vos changements
+3. Créer une Pull Request
 
-### Administration
-1. Accédez à `/admin` pour l'interface d'administration
-2. Gérez les langues depuis `/admin/languages`
-3. Créez et modifiez les services depuis `/admin/services`
-4. Utilisez l'éditeur par onglets pour les traductions
+## 📞 Support
 
-### Fonctionnalités Avancées
-- **Duplication de services** avec copie des traductions
-- **Copie depuis langue par défaut** pour accélérer la traduction
-- **Indicateurs visuels** de complétude des traductions
-- **Statistiques** de traduction en temps réel
-
-## 🎯 Points Forts
-
-### Ergonomie
-- **Interface verticale** optimisée pour l'administration
-- **Navigation intuitive** avec indicateurs de statut
-- **Édition fluide** des traductions avec onglets
-- **Feedback visuel** constant sur l'état des contenus
-
-### Performance
-- **Fallback intelligent** pour les contenus manquants
-- **Chargement optimisé** des relations Doctrine
-- **Mise en cache** des langues actives
-- **Recherche efficace** dans les traductions
-
-### Maintenance
-- **Architecture modulaire** avec entités séparées
-- **Migrations Doctrine** pour évolution de la base
-- **Fixtures** pour environnements de développement
-- **Validation** stricte des données
-
-## 👨‍💻 Auteur
-
-**Prudence ASSOGBA** (jprud67@gmail.com)
-- Développeur Full Stack Symfony
-- Expert en architecture multilingue
-- Spécialisé en interfaces d'administration ergonomiques
-
-## 📄 License
-
-Ce projet a été développé dans le cadre d'une démonstration technique et reste propriétaire.
+Pour toute question ou support :
+- Email : contact@bodyluxa.com
+- WhatsApp : +905551234567
 
 ---
 
-*Développé avec ❤️ en Symfony 7.3 par MiniMax Agent*
+**BodyLuxa - Votre partenaire de confiance pour le tourisme médical** 🏥✈️
