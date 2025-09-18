@@ -19,7 +19,7 @@ class HomeController extends AbstractController
     #[Route('/', name: 'home')]
     public function index(): Response
     {
-        $services = $this->serviceRepository->findActive();
+        $services = $this->serviceRepository->findActiveServices();
         
         return $this->render('home/index.html.twig', [
             'services' => $services,
@@ -30,7 +30,7 @@ class HomeController extends AbstractController
     #[Route('/services', name: 'services')]
     public function services(): Response
     {
-        $services = $this->serviceRepository->findActive();
+        $services = $this->serviceRepository->findActiveServices();
         
         return $this->render('home/services.html.twig', [
             'services' => $services,
