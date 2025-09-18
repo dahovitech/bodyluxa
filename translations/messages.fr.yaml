@@ -242,3 +242,78 @@ testimonials_description: "Les témoignages authentiques de ceux qui nous ont fa
 testimonial_1: "Une expérience exceptionnelle du début à la fin. Résultats parfaits et équipe très professionnelle. Je recommande vivement !"
 testimonial_2: "Service impeccable, clinique moderne et résultats au-delà de mes attentes. Merci à toute l'équipe BodyLuxa !"
 testimonial_3: "Accompagnement parfait, prix très compétitifs et qualité irréprochable. Une expérience à renouveler sans hésitation."
+
+# New modern interface translations
+nav_home: "Accueil"
+nav_services: "Services"
+nav_about: "À propos"
+nav_contact: "Contact"
+get_consultation: "Consultation"
+google_rating: "Note Google"
+services_subtitle: "Découvrez notre gamme complète de services médicaux et esthétiques"
+plastic_surgery: "Chirurgie Plastique"
+plastic_surgery_desc: "Transformez votre silhouette avec nos interventions esthétiques"
+aesthetic_treatments: "Traitements Esthétiques"
+view_all_services: "Voir tous les services"
+
+# Why choose us section
+why_choose_subtitle: "Découvrez les avantages qui font notre différence"
+successful_treatments: "traitements réussis"
+certified_specialists: "spécialistes certifiés"
+countries_served: "pays desservis"
+global_reach: "portée mondiale"
+support_available: "Support disponible"
+always_here_for_you: "toujours là pour vous"
+
+# Price calculator
+price_calculator: "Calculateur de Prix"
+choose_service: "Choisissez un service"
+choose_package: "Choisissez un forfait"
+package_type: "Type de forfait"
+basic_package: "Forfait Basic"
+premium_package: "Forfait Premium"
+vip_package: "Forfait VIP"
+estimated_price: "Prix estimé"
+
+# Testimonials
+patient_testimonials: "Témoignages Patients"
+testimonials_subtitle: "L'avis de ceux qui nous font confiance"
+hair_transplant_patient: "Patient greffe cheveux"
+dental_patient: "Patient dentaire"
+plastic_surgery_patient: "Patiente chirurgie esthétique"
+
+# Contact form
+contact_subtitle: "Votre partenaire de confiance pour des soins d'excellence en Turquie"
+send_message: "Envoyer le message"
+full_name: "Nom complet"
+quick_quote: "Devis Rapide"
+service: "Service"
+package: "Forfait"
+processing: "Traitement en cours"
+sending: "Envoi en cours"
+error_occurred: "Une erreur s'est produite"
+
+# Contact info
+working_hours: "Heures d'ouverture"
+mon_fri: "Lun - Ven"
+emergency_contact: "Contact d'urgence"
+available_24_7: "Disponible 24h/7j"
+whatsapp_now: "WhatsApp maintenant"
+find_us: "Nous trouver"
+
+# Social media
+follow_us: "Suivez-nous"
+
+# Footer
+footer_description: "Votre partenaire de confiance pour des soins médicaux et esthétiques de qualité en Turquie. Excellence, sécurité et prix compétitifs."
+terms_conditions: "Conditions Générales"
+cookie_policy: "Politique des Cookies"
+
+# CTA
+ready_to_start: "Prêt à commencer votre transformation ?"
+contact_cta_text: "Contactez-nous dès aujourd'hui pour une consultation gratuite et personnalisée avec nos experts médicaux."
+book_consultation: "Réserver une consultation"
+call_now: "Appeler maintenant"
+
+# Form validation
+privacy_consent: "J'accepte la politique de confidentialité et les conditions d'utilisation"

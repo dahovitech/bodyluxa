@@ -1,0 +1,166 @@
+<!-- Footer -->
+<footer class="footer bg-dark text-light py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Brand & Description -->
+            <div class="col-lg-4">
+                <div class="footer-brand mb-4">
+                    <h3 class="font-playfair">
+                        <i class="fas fa-gem me-2 text-gradient"></i>
+                        BodyLuxa
+                    </h3>
+                    <p class="text-muted">
+                        {{ 'footer_description'|trans }}
+                    </p>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="social-links">
+                    <h6 class="mb-3">{{ 'follow_us'|trans }}</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2">
+                <h6 class="mb-3">{{ 'quick_links'|trans }}</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="{{ path('home') }}" class="text-muted text-decoration-none">
+                            {{ 'nav_home'|trans }}
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="{{ path('services') }}" class="text-muted text-decoration-none">
+                            {{ 'nav_services'|trans }}
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="{{ path('about') }}" class="text-muted text-decoration-none">
+                            {{ 'nav_about'|trans }}
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="{{ path('contact') }}" class="text-muted text-decoration-none">
+                            {{ 'nav_contact'|trans }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="col-lg-3">
+                <h6 class="mb-3">{{ 'our_services'|trans }}</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="#" class="text-muted text-decoration-none">
+                            {{ 'hair_transplant'|trans }}
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-muted text-decoration-none">
+                            {{ 'plastic_surgery'|trans }}
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-muted text-decoration-none">
+                            {{ 'dental_care'|trans }}
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-muted text-decoration-none">
+                            {{ 'aesthetic_treatments'|trans }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-3">
+                <h6 class="mb-3">{{ 'contact_info'|trans }}</h6>
+                <div class="contact-info">
+                    <div class="d-flex align-items-start mb-3">
+                        <i class="fas fa-map-marker-alt me-3 mt-1 text-primary"></i>
+                        <div>
+                            <p class="mb-0 text-muted small">
+                                Istanbul, Turkey<br>
+                                Medical Tourism Center
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-phone me-3 text-primary"></i>
+                        <a href="tel:+905551234567" class="text-muted text-decoration-none">
+                            +90 555 123 45 67
+                        </a>
+                    </div>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-envelope me-3 text-primary"></i>
+                        <a href="mailto:info@bodyluxa.com" class="text-muted text-decoration-none">
+                            info@bodyluxa.com
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <i class="fab fa-whatsapp me-3 text-success"></i>
+                        <a href="https://wa.me/905551234567" class="text-muted text-decoration-none">
+                            WhatsApp Chat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4 border-secondary">
+
+        <!-- Bottom Footer -->
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="mb-0 text-muted small">
+                    © {{ "now"|date("Y") }} BodyLuxa. {{ 'all_rights_reserved'|trans }}
+                </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="footer-links">
+                    <a href="#" class="text-muted text-decoration-none me-3 small">
+                        {{ 'privacy_policy'|trans }}
+                    </a>
+                    <a href="#" class="text-muted text-decoration-none me-3 small">
+                        {{ 'terms_conditions'|trans }}
+                    </a>
+                    <a href="#" class="text-muted text-decoration-none small">
+                        {{ 'cookie_policy'|trans }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle" style="display: none; z-index: 1000;">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/905551234567" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>

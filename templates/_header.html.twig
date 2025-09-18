@@ -1,67 +1,78 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{ path('homepage') }}">
-            <i class="bi bi-hexagon-fill me-2"></i>Oragon
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="{{ path('home') }}">
+            <i class="fas fa-gem me-2 text-gradient"></i>
+            <span class="font-playfair fw-bold">BodyLuxa</span>
         </a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
+
+        <!-- Navigation Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link{% if app.request.get('_route') == 'homepage' %} active{% endif %}" 
-                       aria-current="page" href="{{ path('homepage') }}">
-                        <i class="bi bi-house me-1"></i>Accueil
+                    <a class="nav-link {{ app.request.get('_route') == 'home' ? 'active' : '' }}" href="{{ path('home') }}">
+                        {{ 'nav_home'|trans }}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link{% if app.request.get('_route') starts with 'service_' %} active{% endif %}" 
-                       href="{{ path('service_search') }}">
-                        <i class="bi bi-search me-1"></i>Rechercher
+                    <a class="nav-link {{ app.request.get('_route') == 'services' ? 'active' : '' }}" href="{{ path('services') }}">
+                        {{ 'nav_services'|trans }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ app.request.get('_route') == 'about' ? 'active' : '' }}" href="{{ path('about') }}">
+                        {{ 'nav_about'|trans }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ app.request.get('_route') == 'contact' ? 'active' : '' }}" href="{{ path('contact') }}">
+                        {{ 'nav_contact'|trans }}
                     </a>
                 </li>
             </ul>
-            
+
+            <!-- Language Switcher & CTA -->
             <div class="d-flex align-items-center">
-                {# Language selector - will be populated by current context #}
-                {% if languages is defined and languages|length > 1 %}
-                    <select class="form-select language-selector me-3" style="max-width: 120px;" 
-                            onchange="switchLanguage(this.value)">
-                        {% for language in languages %}
-                            <option value="{{ language.code }}" 
-                                    {% if currentLanguage is defined and currentLanguage.code == language.code %}selected{% endif %}>
-                                {{ language.nativeName }}
-                            </option>
-                        {% endfor %}
-                    </select>
-                {% endif %}
-                
-                {# Theme toggle #}
-                <button id="themeToggle" class="btn btn-outline-light theme-toggle" type="button" 
-                        title="Basculer le thème">
-                    <i class="bi bi-moon-fill"></i>
-                </button>
-                
-                {# Admin link - only show if user has access #}
-                <a href="{{ path('admin_dashboard') }}" class="btn btn-outline-light ms-2" 
-                   title="Administration">
-                    <i class="bi bi-gear-fill"></i>
+                <!-- Language Dropdown -->
+                <div class="dropdown me-3">
+                    <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-globe me-1"></i>
+                        {{ app.request.locale|upper }}
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="?_locale=en">🇺🇸 English</a></li>
+                        <li><a class="dropdown-item" href="?_locale=fr">🇫🇷 Français</a></li>
+                        <li><a class="dropdown-item" href="?_locale=tr">🇹🇷 Türkçe</a></li>
+                        <li><a class="dropdown-item" href="?_locale=de">🇩🇪 Deutsch</a></li>
+                        <li><a class="dropdown-item" href="?_locale=es">🇪🇸 Español</a></li>
+                    </ul>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="#contact" class="btn btn-gradient btn-sm">
+                    <i class="fas fa-calendar-check me-1"></i>
+                    {{ 'get_consultation'|trans }}
                 </a>
             </div>
         </div>
     </div>
 </nav>
 
-{# Flash messages #}
-{% for type, messages in app.flashes %}
-    {% for message in messages %}
-        <div class="alert alert-{{ type == 'error' ? 'danger' : type }} alert-dismissible fade show m-3" role="alert">
-            <i class="bi bi-{% if type == 'success' %}check-circle{% elseif type == 'error' or type == 'danger' %}exclamation-triangle{% else %}info-circle{% endif %} me-2"></i>
-            {{ message }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+<!-- Flash Messages -->
+<div class="flash-messages" style="margin-top: 80px;">
+    {% for type, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ type == 'error' ? 'danger' : type }} alert-dismissible fade show mx-3" role="alert">
+                <i class="fas fa-{% if type == 'success' %}check-circle{% elseif type == 'error' or type == 'danger' %}exclamation-triangle{% else %}info-circle{% endif %} me-2"></i>
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        {% endfor %}
     {% endfor %}
-{% endfor %}
+</div>

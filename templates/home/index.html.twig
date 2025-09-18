@@ -2,63 +2,57 @@
 
 {% block title %}{{ config.getWebsiteTitle() }} - {{ 'medical_tourism_expert'|trans }}{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/styles/modern.css') }}">
+{% endblock %}
+
 {% block body %}
+
 <!-- Hero Section -->
-<section class="hero-section">
+<section class="hero-section" id="home">
     <div class="container">
-        <div class="row align-items-center hero-content">
-            <div class="col-lg-6">
-                <h1 class="display-4 fw-bold mb-4">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="display-4 fw-bold mb-4 font-playfair">
                     {{ 'hero_title'|trans }}
-                    <span class="text-info">BodyLuxa</span>
+                    <span class="text-gradient">BodyLuxa</span>
                 </h1>
                 <p class="lead mb-4">
                     {{ config.get('hero_description') ?? ('hero_description_default'|trans) }}
                 </p>
-                <div class="d-flex flex-wrap gap-3">
-                    <a href="#services" class="btn btn-primary btn-lg">
+                <div class="d-flex flex-wrap gap-3 mb-5">
+                    <a href="#services" class="btn btn-gradient btn-lg">
                         <i class="fas fa-arrow-right me-2"></i>
                         {{ 'discover_services'|trans }}
                     </a>
-                    <a href="{{ path('contact') }}" class="btn btn-outline-light btn-lg">
+                    <a href="#contact" class="btn btn-outline-light btn-lg">
                         <i class="fas fa-phone me-2"></i>
                         {{ 'get_quote'|trans }}
                     </a>
                 </div>
                 
-                <div class="mt-5 d-flex align-items-center">
-                    <div class="me-4">
-                        <div class="d-flex text-warning mb-2">
-                            {% for i in 1..5 %}
-                                <i class="fas fa-star"></i>
-                            {% endfor %}
-                        </div>
-                        <strong>4.8/5</strong> {{ 'based_on_reviews'|trans }}
+                <!-- Trust Indicators -->
+                <div class="row g-4">
+                    <div class="col-4 text-center">
+                        <div class="stat-number text-warning">4.9★</div>
+                        <small>{{ 'google_rating'|trans }}</small>
                     </div>
-                    <div class="vr mx-3 text-white-50" style="height: 40px;"></div>
-                    <div>
-                        <h5 class="mb-1">1000+</h5>
+                    <div class="col-4 text-center">
+                        <div class="stat-number">1000+</div>
                         <small>{{ 'satisfied_patients'|trans }}</small>
+                    </div>
+                    <div class="col-4 text-center">
+                        <div class="stat-number">10+</div>
+                        <small>{{ 'years_experience'|trans }}</small>
                     </div>
                 </div>
             </div>
             
-            <div class="col-lg-6 text-center">
-                <div class="position-relative">
-                    <img src="https://via.placeholder.com/500x400/3498db/ffffff?text=Medical+Tourism" 
-                         alt="{{ 'medical_tourism'|trans }}" 
-                         class="img-fluid rounded-3 shadow-lg">
-                    
-                    <!-- Floating Elements -->
-                    <div class="position-absolute top-0 end-0 bg-success text-white p-3 rounded-3 shadow" style="margin: -20px;">
-                        <i class="fas fa-check-circle fa-2x mb-2"></i>
-                        <div><strong>100%</strong><br><small>{{ 'satisfaction'|trans }}</small></div>
-                    </div>
-                    
-                    <div class="position-absolute bottom-0 start-0 bg-warning text-dark p-3 rounded-3 shadow" style="margin: -20px;">
-                        <i class="fas fa-award fa-2x mb-2"></i>
-                        <div><strong>5+</strong><br><small>{{ 'years_experience'|trans }}</small></div>
-                    </div>
+            <div class="col-lg-6 text-center" data-aos="fade-left">
+                <div class="hero-image floating">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Medical Tourism" class="img-fluid rounded-3 shadow-lg">
                 </div>
             </div>
         </div>
@@ -68,180 +62,222 @@
 <!-- Services Section -->
 <section class="py-5" id="services">
     <div class="container">
-        <div class="section-title">
-            <h2>{{ 'our_services'|trans }}</h2>
-            <p class="lead text-muted">{{ 'services_description'|trans }}</p>
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-4 font-playfair">{{ 'our_services'|trans }}</h2>
+                <p class="lead text-muted">{{ 'services_subtitle'|trans }}</p>
+            </div>
         </div>
-        
+
         <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
-                        <i class="fas fa-cut"></i>
+            {% for service in services %}
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                    <div class="service-card h-100">
+                        <div class="service-icon mx-auto">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">{{ service.title ?? 'Service Title' }}</h4>
+                        <p class="text-muted mb-4">{{ service.description ?? 'Service description here...' }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-primary fw-bold">{{ 'starting_from'|trans }} €2,500</span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                {{ 'learn_more'|trans }}
+                            </a>
+                        </div>
                     </div>
-                    <h4 class="mb-3">{{ 'hair_transplant'|trans }}</h4>
-                    <p class="text-muted mb-4">{{ 'hair_transplant_desc'|trans }}</p>
-                    <a href="{{ path('services') }}" class="btn btn-outline-primary">
-                        {{ 'learn_more'|trans }}
-                        <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
                 </div>
-            </div>
+            {% endfor %}
             
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon" style="background: linear-gradient(135deg, #3498db, #2980b9);">
-                        <i class="fas fa-tooth"></i>
+            <!-- Default services if none exist -->
+            {% if services is empty %}
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="service-card h-100">
+                        <div class="service-icon mx-auto">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">{{ 'hair_transplant'|trans }}</h4>
+                        <p class="text-muted mb-4">{{ 'hair_transplant_desc'|trans }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-primary fw-bold">{{ 'starting_from'|trans }} €2,500</span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">{{ 'learn_more'|trans }}</a>
+                        </div>
                     </div>
-                    <h4 class="mb-3">{{ 'dental_care'|trans }}</h4>
-                    <p class="text-muted mb-4">{{ 'dental_care_desc'|trans }}</p>
-                    <a href="{{ path('services') }}" class="btn btn-outline-primary">
-                        {{ 'learn_more'|trans }}
-                        <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
                 </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);">
-                        <i class="fas fa-spa"></i>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card h-100">
+                        <div class="service-icon mx-auto">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">{{ 'plastic_surgery'|trans }}</h4>
+                        <p class="text-muted mb-4">{{ 'plastic_surgery_desc'|trans }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-primary fw-bold">{{ 'starting_from'|trans }} €3,000</span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">{{ 'learn_more'|trans }}</a>
+                        </div>
                     </div>
-                    <h4 class="mb-3">{{ 'cosmetic_surgery'|trans }}</h4>
-                    <p class="text-muted mb-4">{{ 'cosmetic_surgery_desc'|trans }}</p>
-                    <a href="{{ path('services') }}" class="btn btn-outline-primary">
-                        {{ 'learn_more'|trans }}
-                        <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
                 </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon" style="background: linear-gradient(135deg, #1abc9c, #16a085);">
-                        <i class="fas fa-eye"></i>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card h-100">
+                        <div class="service-icon mx-auto">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">{{ 'dental_care'|trans }}</h4>
+                        <p class="text-muted mb-4">{{ 'dental_care_desc'|trans }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-primary fw-bold">{{ 'starting_from'|trans }} €1,500</span>
+                            <a href="#" class="btn btn-outline-primary btn-sm">{{ 'learn_more'|trans }}</a>
+                        </div>
                     </div>
-                    <h4 class="mb-3">{{ 'eye_surgery'|trans }}</h4>
-                    <p class="text-muted mb-4">{{ 'eye_surgery_desc'|trans }}</p>
-                    <a href="{{ path('services') }}" class="btn btn-outline-primary">
-                        {{ 'learn_more'|trans }}
-                        <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
                 </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon" style="background: linear-gradient(135deg, #f39c12, #e67e22);">
-                        <i class="fas fa-weight"></i>
-                    </div>
-                    <h4 class="mb-3">{{ 'bariatric_surgery'|trans }}</h4>
-                    <p class="text-muted mb-4">{{ 'bariatric_surgery_desc'|trans }}</p>
-                    <a href="{{ path('services') }}" class="btn btn-outline-primary">
-                        {{ 'learn_more'|trans }}
-                        <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="service-card">
-                    <div class="service-icon" style="background: linear-gradient(135deg, #e91e63, #c2185b);">
-                        <i class="fas fa-baby"></i>
-                    </div>
-                    <h4 class="mb-3">{{ 'ivf_treatment'|trans }}</h4>
-                    <p class="text-muted mb-4">{{ 'ivf_treatment_desc'|trans }}</p>
-                    <a href="{{ path('services') }}" class="btn btn-outline-primary">
-                        {{ 'learn_more'|trans }}
-                        <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
-                </div>
-            </div>
+            {% endif %}
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="{{ path('services') }}" class="btn btn-gradient btn-lg">
+                {{ 'view_all_services'|trans }}
+                <i class="fas fa-arrow-right ms-2"></i>
+            </a>
         </div>
     </div>
 </section>
 
 <!-- Why Choose Us Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-4 font-playfair">{{ 'why_choose_us'|trans }}</h2>
+                <p class="lead text-muted">{{ 'why_choose_subtitle'|trans }}</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                <div class="stat-card">
+                    <div class="stat-number">1000+</div>
+                    <h5 class="fw-bold">{{ 'happy_patients'|trans }}</h5>
+                    <p class="text-muted">{{ 'successful_treatments'|trans }}</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <h5 class="fw-bold">{{ 'expert_doctors'|trans }}</h5>
+                    <p class="text-muted">{{ 'certified_specialists'|trans }}</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <h5 class="fw-bold">{{ 'countries_served'|trans }}</h5>
+                    <p class="text-muted">{{ 'global_reach'|trans }}</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <h5 class="fw-bold">{{ 'support_available'|trans }}</h5>
+                    <p class="text-muted">{{ 'always_here_for_you'|trans }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Price Calculator Section -->
+<section class="py-5" id="calculator">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="price-calculator" data-aos="fade-up">
+                    <h3 class="text-center mb-4 font-playfair">{{ 'price_calculator'|trans }}</h3>
+                    <form id="priceCalculatorForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">{{ 'select_service'|trans }}</label>
+                                <select class="form-select" id="serviceSelect" required>
+                                    <option value="">{{ 'choose_service'|trans }}</option>
+                                    <option value="hair-transplant" data-price="2500">{{ 'hair_transplant'|trans }}</option>
+                                    <option value="plastic-surgery" data-price="3000">{{ 'plastic_surgery'|trans }}</option>
+                                    <option value="dental-care" data-price="1500">{{ 'dental_care'|trans }}</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">{{ 'package_type'|trans }}</label>
+                                <select class="form-select" id="packageSelect" required>
+                                    <option value="">{{ 'choose_package'|trans }}</option>
+                                    <option value="basic" data-multiplier="1">{{ 'basic_package'|trans }}</option>
+                                    <option value="premium" data-multiplier="1.5">{{ 'premium_package'|trans }}</option>
+                                    <option value="vip" data-multiplier="2">{{ 'vip_package'|trans }}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="price-result" id="priceResult" style="display: none;">
+                                <span>{{ 'estimated_price'|trans }}: €<span id="finalPrice">0</span></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
 <section class="py-5 bg-light">
     <div class="container">
-        <div class="section-title">
-            <h2>{{ 'why_choose_us'|trans }}</h2>
-            <p class="lead text-muted">{{ 'why_choose_us_desc'|trans }}</p>
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-4 font-playfair">{{ 'patient_testimonials'|trans }}</h2>
+                <p class="lead text-muted">{{ 'testimonials_subtitle'|trans }}</p>
+            </div>
         </div>
-        
+
         <div class="row g-4">
-            <div class="col-lg-6">
-                <div class="d-flex mb-4">
-                    <div class="flex-shrink-0">
-                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                            <i class="fas fa-shield-alt"></i>
+            <div class="col-lg-4" data-aos="fade-up">
+                <div class="testimonial-card">
+                    <p class="mb-4">"{{ 'testimonial_1'|trans }}"</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b1e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                             alt="Patient" class="testimonial-avatar me-3">
+                        <div>
+                            <h6 class="mb-0">Sarah Johnson</h6>
+                            <small class="text-muted">{{ 'hair_transplant_patient'|trans }}</small>
                         </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                        <h5>{{ 'quality_guarantee'|trans }}</h5>
-                        <p class="text-muted">{{ 'quality_guarantee_desc'|trans }}</p>
-                    </div>
-                </div>
-                
-                <div class="d-flex mb-4">
-                    <div class="flex-shrink-0">
-                        <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                        <h5>{{ 'expert_surgeons'|trans }}</h5>
-                        <p class="text-muted">{{ 'expert_surgeons_desc'|trans }}</p>
-                    </div>
-                </div>
-                
-                <div class="d-flex">
-                    <div class="flex-shrink-0">
-                        <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                        <h5>{{ '24_7_support'|trans }}</h5>
-                        <p class="text-muted">{{ '24_7_support_desc'|trans }}</p>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-lg-6">
-                <div class="d-flex mb-4">
-                    <div class="flex-shrink-0">
-                        <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                            <i class="fas fa-plane"></i>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-card">
+                    <p class="mb-4">"{{ 'testimonial_2'|trans }}"</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                             alt="Patient" class="testimonial-avatar me-3">
+                        <div>
+                            <h6 class="mb-0">Michael Chen</h6>
+                            <small class="text-muted">{{ 'dental_patient'|trans }}</small>
                         </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                        <h5>{{ 'complete_package'|trans }}</h5>
-                        <p class="text-muted">{{ 'complete_package_desc'|trans }}</p>
                     </div>
                 </div>
-                
-                <div class="d-flex mb-4">
-                    <div class="flex-shrink-0">
-                        <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                            <i class="fas fa-tags"></i>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-card">
+                    <p class="mb-4">"{{ 'testimonial_3'|trans }}"</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                             alt="Patient" class="testimonial-avatar me-3">
+                        <div>
+                            <h6 class="mb-0">Emma Williams</h6>
+                            <small class="text-muted">{{ 'plastic_surgery_patient'|trans }}</small>
                         </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                        <h5>{{ 'best_prices'|trans }}</h5>
-                        <p class="text-muted">{{ 'best_prices_desc'|trans }}</p>
-                    </div>
-                </div>
-                
-                <div class="d-flex">
-                    <div class="flex-shrink-0">
-                        <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                    </div>
-                    <div class="flex-grow-1 ms-3">
-                        <h5>{{ 'accredited_clinics'|trans }}</h5>
-                        <p class="text-muted">{{ 'accredited_clinics_desc'|trans }}</p>
                     </div>
                 </div>
             </div>
@@ -249,91 +285,89 @@
     </div>
 </section>
 
-<!-- Process Section -->
-<section class="py-5">
-    <div class="container">
-        <div class="section-title">
-            <h2>{{ 'our_process'|trans }}</h2>
-            <p class="lead text-muted">{{ 'process_description'|trans }}</p>
-        </div>
-        
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mb-4">
-                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
-                        <span class="h3 mb-0">1</span>
-                    </div>
-                </div>
-                <h5>{{ 'step_consultation'|trans }}</h5>
-                <p class="text-muted">{{ 'step_consultation_desc'|trans }}</p>
-            </div>
-            
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mb-4">
-                    <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
-                        <span class="h3 mb-0">2</span>
-                    </div>
-                </div>
-                <h5>{{ 'step_planning'|trans }}</h5>
-                <p class="text-muted">{{ 'step_planning_desc'|trans }}</p>
-            </div>
-            
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mb-4">
-                    <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
-                        <span class="h3 mb-0">3</span>
-                    </div>
-                </div>
-                <h5>{{ 'step_treatment'|trans }}</h5>
-                <p class="text-muted">{{ 'step_treatment_desc'|trans }}</p>
-            </div>
-            
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mb-4">
-                    <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
-                        <span class="h3 mb-0">4</span>
-                    </div>
-                </div>
-                <h5>{{ 'step_followup'|trans }}</h5>
-                <p class="text-muted">{{ 'step_followup_desc'|trans }}</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="py-5 bg-primary text-white">
+<!-- Contact CTA Section -->
+<section class="py-5" id="contact">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h3 class="mb-3">{{ 'ready_to_start'|trans }}</h3>
-                <p class="lead mb-0">{{ 'cta_description'|trans }}</p>
+            <div class="col-lg-8" data-aos="fade-right">
+                <h2 class="display-5 fw-bold mb-4 font-playfair">{{ 'ready_to_start'|trans }}</h2>
+                <p class="lead mb-4">{{ 'contact_cta_text'|trans }}</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="{{ path('contact') }}" class="btn btn-gradient btn-lg">
+                        <i class="fas fa-calendar-check me-2"></i>
+                        {{ 'book_consultation'|trans }}
+                    </a>
+                    <a href="tel:+905551234567" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-phone me-2"></i>
+                        {{ 'call_now'|trans }}
+                    </a>
+                </div>
             </div>
-            <div class="col-lg-4 text-lg-end">
-                <a href="{{ path('contact') }}" class="btn btn-light btn-lg">
-                    <i class="fas fa-calendar-check me-2"></i>
-                    {{ 'book_consultation'|trans }}
-                </a>
+            <div class="col-lg-4 text-center" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                     alt="Contact Us" class="img-fluid rounded-3 glow">
             </div>
         </div>
     </div>
 </section>
+
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
     <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+        // Price Calculator
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceSelect = document.getElementById('serviceSelect');
+            const packageSelect = document.getElementById('packageSelect');
+            const priceResult = document.getElementById('priceResult');
+            const finalPrice = document.getElementById('finalPrice');
+
+            function calculatePrice() {
+                const service = serviceSelect.options[serviceSelect.selectedIndex];
+                const package = packageSelect.options[packageSelect.selectedIndex];
+
+                if (service.value && package.value) {
+                    const basePrice = parseInt(service.dataset.price);
+                    const multiplier = parseFloat(package.dataset.multiplier);
+                    const total = Math.round(basePrice * multiplier);
+
+                    finalPrice.textContent = total.toLocaleString();
+                    priceResult.style.display = 'block';
+                    priceResult.classList.add('animated', 'fadeIn');
+                } else {
+                    priceResult.style.display = 'none';
                 }
+            }
+
+            serviceSelect.addEventListener('change', calculatePrice);
+            packageSelect.addEventListener('change', calculatePrice);
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTop.style.display = 'block';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+            });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
