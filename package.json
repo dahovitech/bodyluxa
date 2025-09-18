@@ -11,9 +11,9 @@
     "license": "UNLICENSED",
     "private": true,
     "scripts": {
-        "dev-server": "encore dev-server",
-        "dev": "encore dev",
-        "watch": "encore dev --watch",
-        "build": "encore production --progress"
+        "dev-server": "node ./lib/node_modules/@symfony/webpack-encore/bin/encore.js dev-server",
+        "dev": "node ./lib/node_modules/@symfony/webpack-encore/bin/encore.js dev",
+        "watch": "node ./lib/node_modules/@symfony/webpack-encore/bin/encore.js dev --watch",
+        "build": "node ./lib/node_modules/@symfony/webpack-encore/bin/encore.js production --progress"
     }
 }
