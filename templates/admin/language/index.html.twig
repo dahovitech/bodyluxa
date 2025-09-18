@@ -1,15 +1,15 @@
 {% extends 'admin/base.html.twig' %}
 
-{% block title %}Langues - Administration - Oragon{% endblock %}
+{% block title %}{{ 'language.title'|trans({}, 'admin') }} - {{ 'general.administration'|trans({}, 'admin') }} - BodyLuxa{% endblock %}
 
 {% block body %}
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">
-        <i class="bi bi-globe me-2 text-success"></i>Gestion des langues
+        <i class="bi bi-globe me-2 text-success"></i>{{ 'language.management'|trans({}, 'admin') }}
     </h1>
     <div class="btn-toolbar mb-2 mb-md-0">
         <a href="{{ path('admin_language_new') }}" class="btn btn-success">
-            <i class="bi bi-plus-circle me-2"></i>Nouvelle langue
+            <i class="bi bi-plus-circle me-2"></i>{{ 'language.new'|trans({}, 'admin') }}
         </a>
     </div>
 </div>
@@ -21,13 +21,13 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Code</th>
-                            <th>Nom</th>
-                            <th>Nom natif</th>
-                            <th>Statut</th>
-                            <th>Par défaut</th>
-                            <th>Ordre</th>
-                            <th>Actions</th>
+                            <th>{{ 'language.code'|trans({}, 'admin') }}</th>
+                            <th>{{ 'language.name'|trans({}, 'admin') }}</th>
+                            <th>{{ 'language.native_name'|trans({}, 'admin') }}</th>
+                            <th>{{ 'language.status'|trans({}, 'admin') }}</th>
+                            <th>{{ 'language.default'|trans({}, 'admin') }}</th>
+                            <th>{{ 'language.order'|trans({}, 'admin') }}</th>
+                            <th>{{ 'general.actions'|trans({}, 'admin') }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,19 +44,19 @@
                             </td>
                             <td>
                                 {% if language.active %}
-                                    <span class="badge bg-success">Actif</span>
+                                    <span class="badge bg-success">{{ 'language.active'|trans({}, 'admin') }}</span>
                                 {% else %}
-                                    <span class="badge bg-secondary">Inactif</span>
+                                    <span class="badge bg-secondary">{{ 'language.inactive'|trans({}, 'admin') }}</span>
                                 {% endif %}
                             </td>
                             <td>
                                 {% if language.default %}
-                                    <i class="bi bi-star-fill text-warning" title="Langue par défaut"></i>
+                                    <i class="bi bi-star-fill text-warning" title="{{ 'language.default_language'|trans({}, 'admin') }}"></i>
                                 {% else %}
                                     <form method="post" action="{{ path('admin_language_set_default', {id: language.id}) }}" class="d-inline">
                                         <input type="hidden" name="_token" value="{{ csrf_token('set_default' ~ language.id) }}">
                                         <button type="submit" class="btn btn-sm btn-outline-warning" 
-                                                title="Définir comme défaut" 
+                                                title="{{ 'language.set_as_default'|trans({}, 'admin') }}" 
                                                 {% if not language.active %}disabled{% endif %}>
                                             <i class="bi bi-star"></i>
                                         </button>
@@ -69,27 +69,27 @@
                             <td>
                                 <div class="btn-group" role="group">
                                     <a href="{{ path('admin_language_show', {id: language.id}) }}" 
-                                       class="btn btn-sm btn-outline-info" title="Voir">
+                                       class="btn btn-sm btn-outline-info" title="{{ 'general.view'|trans({}, 'admin') }}">
                                         <i class="bi bi-eye"></i>
                                     </a>
                                     <a href="{{ path('admin_language_edit', {id: language.id}) }}" 
-                                       class="btn btn-sm btn-outline-primary" title="Modifier">
+                                       class="btn btn-sm btn-outline-primary" title="{{ 'general.edit'|trans({}, 'admin') }}">
                                         <i class="bi bi-pencil"></i>
                                     </a>
                                     <form method="post" action="{{ path('admin_language_toggle_status', {id: language.id}) }}" class="d-inline">
                                         <input type="hidden" name="_token" value="{{ csrf_token('toggle_status' ~ language.id) }}">
                                         <button type="submit" 
                                                 class="btn btn-sm btn-outline-{{ language.active ? 'warning' : 'success' }}" 
-                                                title="{{ language.active ? 'Désactiver' : 'Activer' }}"
-                                                {% if language.default and language.active %}disabled title="Impossible de désactiver la langue par défaut"{% endif %}>
+                                                title="{{ language.active ? 'language.deactivate'|trans({}, 'admin') : 'language.activate'|trans({}, 'admin') }}"
+                                                {% if language.default and language.active %}disabled title="{{ 'language.cannot_deactivate_default'|trans({}, 'admin') }}"{% endif %}>
                                             <i class="bi bi-{{ language.active ? 'pause' : 'play' }}-fill"></i>
                                         </button>
                                     </form>
                                     {% if not language.default %}
                                         <form method="post" action="{{ path('admin_language_delete', {id: language.id}) }}" 
-                                              class="d-inline" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette langue ?')">
+                                              class="d-inline" onsubmit="return confirm('{{ 'language.confirm_delete'|trans({}, 'admin') }}')">
                                             <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ language.id) }}">
-                                            <button type="submit" class="btn btn-sm btn-outline-danger" title="Supprimer">
+                                            <button type="submit" class="btn btn-sm btn-outline-danger" title="{{ 'general.delete'|trans({}, 'admin') }}">
                                                 <i class="bi bi-trash"></i>
                                             </button>
                                         </form>
@@ -107,10 +107,10 @@
     <div class="card">
         <div class="card-body text-center py-5">
             <i class="bi bi-globe display-1 text-muted mb-4"></i>
-            <h4 class="text-muted mb-3">Aucune langue configurée</h4>
-            <p class="text-muted mb-4">Commencez par ajouter votre première langue pour pouvoir gérer les traductions.</p>
+            <h4 class="text-muted mb-3">{{ 'language.no_languages'|trans({}, 'admin') }}</h4>
+            <p class="text-muted mb-4">{{ 'language.no_languages_desc'|trans({}, 'admin') }}</p>
             <a href="{{ path('admin_language_new') }}" class="btn btn-success">
-                <i class="bi bi-plus-circle me-2"></i>Créer une langue
+                <i class="bi bi-plus-circle me-2"></i>{{ 'language.create_first'|trans({}, 'admin') }}
             </a>
         </div>
     </div>
